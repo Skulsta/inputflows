@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -37,8 +37,9 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="bg-gray-200 min-h-screen p-12">
-      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg">
+    <div className="bg-gray-200 min-h-screen p-8">
+      <Link to="/">Go back</Link>
+      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg mt-8">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             {/* Title Section */}
