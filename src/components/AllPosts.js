@@ -38,7 +38,7 @@ export default function AllPosts() {
               .map((post, index) => (
                 <Link to={"/" + post.slug.current} key={post.slug.current}>
                   <span
-                    className="block h-64 relative rounded shadow leading-snug bg-white"
+                    className="block h-64 relative rounded shadow leading-snug bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
                     key={index}
                   >
                     <img

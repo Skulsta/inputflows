@@ -38,12 +38,12 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="bg-gray-200 min-h-screen p-8">
-      <Link to="/" className="flex space-x-2">
+    <div className="bg-gray-200 min-h-screen sm:p-8">
+      <Link to="/" className="hidden sm:flex space-x-2">
         <img src={GoBack} alt="Go back" />
         <div className="flex text-gray-700">Go back</div>
       </Link>
-      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg mt-8">
+      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg sm:mt-8">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
             {/* Title Section */}
@@ -70,7 +70,7 @@ export default function OnePost() {
             style={{ height: "400px" }}
           />
         </div>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-8 sm:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
           <BlockContent
             blocks={postData.body}
             projectId={sanityClient.clientConfig.projectId}
