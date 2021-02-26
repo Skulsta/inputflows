@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import GoBack from "../assets/icons/back-arrow.svg";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -38,7 +39,10 @@ export default function OnePost() {
 
   return (
     <div className="bg-gray-200 min-h-screen p-8">
-      <Link to="/">Go back</Link>
+      <Link to="/" className="flex space-x-2">
+        <img src={GoBack} alt="Go back" />
+        <div className="flex text-gray-700">Go back</div>
+      </Link>
       <div className="container shadow-lg mx-auto bg-green-100 rounded-lg mt-8">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
