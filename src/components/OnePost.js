@@ -28,7 +28,8 @@ export default function OnePost() {
           },
           body,
           "name": author->name,
-          "authorImage": author->image
+          "authorImage": author->image,
+          "publishedAt": publishedAt
        }`
       )
       .then((data) => setPostData(data[0]))
@@ -60,6 +61,9 @@ export default function OnePost() {
                 <h4 className="cursive flex items-center pl-2 text-2xl">
                   {postData.name}
                 </h4>
+              </div>
+              <div className="text-sm text-center">
+                Date here: {postData.publishedAt}
               </div>
             </div>
           </div>
