@@ -32,28 +32,25 @@ export default function AllPosts() {
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {allPostsData &&
-            allPostsData
-              .slice(0)
-              .reverse()
-              .map((post, index) => (
-                <Link to={"/" + post.slug.current} key={post.slug.current}>
-                  <span
-                    className="block h-64 relative rounded shadow leading-snug bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-                    key={index}
-                  >
-                    <img
-                      className="w-full h-full rounded object-cover absolute"
-                      src={post.mainImage.asset.url}
-                      alt=""
-                    />
-                    <span className="block relative h-full flex justify-end items-end pb-4">
-                      <h2 className="text-gray-800 text-lg font-bold px-3 py-4 bg-green-100 bg-opacity-75 rounded-l">
-                        {post.title}
-                      </h2>
-                    </span>
+            allPostsData.map((post, index) => (
+              <Link to={"/" + post.slug.current} key={post.slug.current}>
+                <span
+                  className="block h-64 relative rounded shadow leading-snug bg-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+                  key={index}
+                >
+                  <img
+                    className="w-full h-full rounded object-cover absolute"
+                    src={post.mainImage.asset.url}
+                    alt=""
+                  />
+                  <span className="block relative h-full flex justify-end items-end pb-4">
+                    <h2 className="text-gray-800 text-lg font-bold px-3 py-4 bg-green-100 bg-opacity-75 rounded-l">
+                      {post.title}
+                    </h2>
                   </span>
-                </Link>
-              ))}
+                </span>
+              </Link>
+            ))}
         </div>
       </div>
     </div>

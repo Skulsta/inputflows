@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
+import Moment from "moment";
+import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import GoBack from "../assets/icons/back-arrow.svg";
 
@@ -62,8 +63,10 @@ export default function OnePost() {
                   {postData.name}
                 </h4>
               </div>
-              <div className="text-sm text-center">
-                Date here: {postData.publishedAt}
+              <div className="text-sm text-center pt-2">
+                {Moment(
+                  new Date(postData.publishedAt).toISOString().slice(0, 10)
+                ).format("ll")}
               </div>
             </div>
           </div>
