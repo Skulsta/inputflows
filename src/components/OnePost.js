@@ -41,8 +41,8 @@ export default function OnePost() {
 
   return (
     <div className="min-h-screen sm:p-8  max-w-screen-2xl">
-      <Link to="/posts" className="flex z-20 sticky top-0">
-        <div className="px-4 py-6">
+      <Link to="/posts" className="flex z-20 sticky top-0 -my-24">
+        <div className="px-4 py-20">
           <img src={GoBack} alt="Go back" />
         </div>
         <div className="text-gray-700 self-center">Go back</div>

@@ -20,21 +20,21 @@ export default function HeroSection() {
             </div>
             <div className="flex justify-center space-x-8">
               <a
-                href="http://twitter.com/skulsta"
+                href="https://www.linkedin.com/in/stian-skulstad/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img className="w-8" src={LinedInIcon} alt="linkedin button" />
               </a>
               <a
-                href="http://twitter.com/skulsta"
+                href="https://github.com/Skulsta"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img className="w-8" src={GitHubIcon} alt="linkedin button" />
               </a>
               <a
-                href="http://twitter.com/skulsta"
+                href="https://twitter.com/Skulsta"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -61,8 +61,8 @@ export default function HeroSection() {
               Sanity.
             </p>
             <p>
-              Do enjoy searching for companies in Brønnøysund? Now you can do it
-              marginally faster!
+              Do you enjoy searching for companies in Brønnøysund? Now you can
+              do it marginally faster!
             </p>
           </div>
         </div>
