@@ -43,14 +43,14 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="p-8 border bg-white border-none rounded lg:w-2/3 space-y-8">
-            <p>
+            {/* <p>
               In the name of open source, the code for this site can be found
               <Link to="/posts" className="text-green-800 hover:text-green-600">
                 {" "}
                 here
               </Link>
               .
-            </p>
+            </p> */}
             <p>
               A section with all kinds of posts (one post) can be accessed{" "}
               <Link to="/posts" className="text-green-800 hover:text-green-600">
@@ -60,10 +60,10 @@ export default function HeroSection() {
               . The data for this section is handled with an implementation of
               Sanity.
             </p>
-            <p>
+            {/* <p>
               Do you enjoy searching for companies in Brønnøysund? Now you can
               do it marginally faster!
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
