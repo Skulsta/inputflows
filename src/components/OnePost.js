@@ -45,18 +45,18 @@ export default function OnePost() {
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center">
             <div className="bg-white bg-opacity-75 rounded p-12">
-              <h2 className="text-4xl mb-4">{postData.title}</h2>
+              <h2 className="text-3xl md:text-4xl mb-4">{postData.title}</h2>
               <div className="flex justify-center text-gray-800">
                 <img
                   src={urlFor(postData.authorImage).url()}
                   className="w-10 h-10 rounded-full"
                   alt="Author is Kap"
                 />
-                <h4 className="flex items-center pl-2 text-2xl">
+                <h4 className="flex items-center pl-2 text-xl">
                   {postData.name}
                 </h4>
               </div>
-              <div className="text-center pt-2 text-xl text-gray-800">
+              <div className="text-center pt-2 text-gray-800">
                 {Moment(
                   new Date(postData.publishedAt).toISOString().slice(0, 10)
                 ).format("ll")}
