@@ -43,14 +43,19 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="p-8 border bg-white border-none rounded lg:w-2/3 space-y-8">
-            {/* <p>
+            <p>
               In the name of open source, the code for this site can be found
-              <Link to="/posts" className="text-green-800 hover:text-green-600">
+              <a
+                href="https://github.com/Skulsta/inputflows"
+                target="_blank"
+                rel="noreferrer"
+                className="text-green-800 hover:text-green-600"
+              >
                 {" "}
                 here
-              </Link>
+              </a>
               .
-            </p> */}
+            </p>
             <p>
               A section with all kinds of posts (one post) can be accessed{" "}
               <Link to="/posts" className="text-green-800 hover:text-green-600">

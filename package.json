@@ -1,7 +1,7 @@
 {
   "name": "inputflows",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.2.6",
