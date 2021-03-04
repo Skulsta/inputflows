@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
           <div className="p-8 border bg-white border-none rounded lg:w-2/3 space-y-8">
             <p>
-              In the name of open source, the code for this site can be found
+              In the name of open source, the code for this site can be found on
               <a
                 href="https://github.com/Skulsta/inputflows"
                 target="_blank"
@@ -52,18 +52,28 @@ export default function HeroSection() {
                 className="text-green-800 hover:text-green-600"
               >
                 {" "}
-                here
+                GitHub
               </a>
               .
             </p>
             <p>
-              A section with all kinds of posts (one post) can be accessed{" "}
+              A section with all kinds of posts (one post) can be accessed in
+              the{" "}
               <Link to="/posts" className="text-green-800 hover:text-green-600">
                 {" "}
-                here
+                posts section
               </Link>
-              . The data for this section is handled with an implementation of
-              Sanity.
+              . The data for the posts are handled with an implementation of
+              <a
+                href="https://sanity.io"
+                target="_blank"
+                rel="noreferrer"
+                className="text-green-800 hover:text-green-600"
+              >
+                {" "}
+                Sanity
+              </a>
+              .
             </p>
             {/* <p>
               Do you enjoy searching for companies in Brønnøysund? Now you can
