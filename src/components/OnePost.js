@@ -40,15 +40,16 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="bg-gray-200 min-h-screen sm:p-8">
-      <Link to="/" className="hidden sm:flex space-x-2">
-        <img src={GoBack} alt="Go back" />
-        <div className="flex text-gray-700">Go back</div>
+    <div className="min-h-screen sm:p-8  max-w-screen-2xl">
+      <Link to="/posts" className="flex z-20 sticky top-0">
+        <div className="px-4 py-6">
+          <img src={GoBack} alt="Go back" />
+        </div>
+        <div className="text-gray-700 self-center">Go back</div>
       </Link>
-      <div className="container shadow-lg mx-auto bg-green-100 rounded-lg sm:mt-8">
+      <div className="container shadow-xl mx-auto bg-green-800 bg-opacity-25 rounded-lg sm:mt-8">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            {/* Title Section */}
             <div className="bg-white bg-opacity-75 rounded p-12">
               <h2 className="cursive text-3xl lg:text-6xl mb-4">
                 {postData.title}
