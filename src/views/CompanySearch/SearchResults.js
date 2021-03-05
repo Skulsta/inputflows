@@ -1,11 +1,11 @@
-import Info from "./Info";
+import CompanyInfo from "./CompanyInfo";
 
 export default function SearchResults(props) {
   let fetchedArray = props.data;
   const print = fetchedArray.map((item) => {
     return (
       <div key={item.organisasjonsnummer}>
-        <Info
+        <CompanyInfo
           navn={item.navn}
           org={item.organisasjonsnummer}
           beskriv1={item.naeringskode1 && item.naeringskode1.beskrivelse}
@@ -25,7 +25,7 @@ export default function SearchResults(props) {
 
   return (
     <div className="SearchResults">
-      <div style={{ padding: fetchedArray.length > 0 && "4%" }}> {print}</div>
+      <div className=""> {print}</div>
     </div>
   );
 }

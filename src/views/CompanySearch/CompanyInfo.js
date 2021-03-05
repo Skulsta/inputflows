@@ -6,7 +6,7 @@ export default function Info(props) {
 
   if (expanded) {
     expandedContent = (
-      <div className="information">
+      <div>
         <span> OrgNr: {props.org} </span>
         <br />
         <span> Beskrivelse: {props.beskriv2} </span>
@@ -27,7 +27,13 @@ export default function Info(props) {
           <br />
         </span>
         <span style={{ display: !props.hjemmeside && "none" }}>
-          <a href={"http://" + props.hjemmeside}>Besøk nettsiden</a>
+          <a
+            href={"https://" + props.hjemmeside}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Go to website
+          </a>
           <br />
         </span>
         <span id="konkurs" style={{ display: !props.konkurs && "none" }}>

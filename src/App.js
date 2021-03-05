@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
-import AllPosts from "./components/AllPosts.js";
-import OnePost from "./components/OnePost.js";
-import HeroSection from "./views/Home/HeroSection.js";
+import AllPosts from "./components/AllPosts";
+import OnePost from "./components/OnePost";
+import CompanySearch from "./views/CompanySearch/CompanySearch";
+import HeroSection from "./views/Home/HeroSection";
 import ScrollToTop from "./utilities/ScrollToTop";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route component={HeroSection} path="/" exact />
           <Route component={AllPosts} path="/posts" exact />
           <Route component={OnePost} path="/posts/:slug" />
+          <Route component={CompanySearch} path="/brreg" />
         </Switch>
         <footer className="bg-gray-800 py-12">
           <div className="max-w-screen-xl mx-auto">
