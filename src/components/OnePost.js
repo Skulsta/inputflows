@@ -40,12 +40,12 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen sm:p-8  max-w-screen-2xl">
+    <div className="min-h-screen max-w-screen-2xl">
       <div className="container shadow-xl mx-auto bg-green-800 bg-opacity-25 rounded-lg sm:mt-8">
         <div className="relative">
-          <div className="absolute h-full w-full flex items-center justify-center">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h2 className="text-3xl md:text-4xl mb-4">{postData.title}</h2>
+          <div className="absolute h-full w-full flex items-center justify-center p-4">
+            <div className="bg-white bg-opacity-75 rounded p-8 w-full text-center">
+              <h2 className="text-3xl md:text-4xl mb-8">{postData.title}</h2>
               <div className="flex justify-center text-gray-800">
                 <img
                   src={urlFor(postData.authorImage).url()}
