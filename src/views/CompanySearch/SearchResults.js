@@ -5,7 +5,7 @@ export default function SearchResults(props) {
   const print = fetchedArray.map((item) => {
     return (
       <div key={item.organisasjonsnummer}>
-        <div className="inline-block">
+        <div className="inline-block border w-full p-4 rounded border-green-800 border-opacity-25">
           <CompanyInfo
             navn={item.navn}
             org={item.organisasjonsnummer}
@@ -27,5 +27,5 @@ export default function SearchResults(props) {
     );
   });
 
-  return <div className="space-y-10">{print}</div>;
+  return <div className="space-y-4">{print}</div>;
 }

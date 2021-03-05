@@ -6,27 +6,19 @@ export default function Info(props) {
 
   if (expanded) {
     expandedContent = (
-      <div>
-        <span> Organization number: {props.org} </span>
-        <br />
-        <span> Description: {props.beskriv2} </span>
-        <br />
-        <span> Industry code: {props.beskriv1} </span>
-        <br />
-        <span style={{ display: !props.sted && "none" }}>
+      <div className="space-y-2 pt-2 text-gray-800">
+        <p> Organization number: {props.org} </p>
+        <p> Description: {props.beskriv2} </p>
+        <p> Industry code: {props.beskriv1} </p>
+        <p style={{ display: !props.sted && "none" }}>
           {" "}
           Postal: {props.sted2} {props.sted}
-          <br />
-        </span>{" "}
-        <span style={{ display: !props.sted1 && "none" }}>
+        </p>{" "}
+        <p style={{ display: !props.sted1 && "none" }}>
           Address: {props.sted1}
-          <br />
-        </span>
-        <span style={{ display: !props.epost && "none" }}>
-          Email:{props.epost}
-          <br />
-        </span>
-        <span style={{ display: !props.hjemmeside && "none" }}>
+        </p>
+        <p style={{ display: !props.epost && "none" }}>Email:{props.epost}</p>
+        <p style={{ display: !props.hjemmeside && "none" }}>
           <a
             href={"https://" + props.hjemmeside}
             target="_blank"
@@ -35,22 +27,24 @@ export default function Info(props) {
           >
             Go to website
           </a>
-          <br />
-        </span>
-        <span
+        </p>
+        <p
           id="konkurs"
           className="text-red-800"
           style={{ display: !props.konkurs && "none" }}
         >
           The company is bankrupt
-        </span>
+        </p>
       </div>
     );
   }
 
   return (
     <div className="w-min">
-      <h3 onClick={() => setExpanded(!expanded)}> {props.navn} </h3>
+      <h3 className="cursor-pointer" onClick={() => setExpanded(!expanded)}>
+        {" "}
+        {props.navn}{" "}
+      </h3>
       {expandedContent}
     </div>
   );

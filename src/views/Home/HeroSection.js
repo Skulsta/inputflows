@@ -75,10 +75,14 @@ export default function HeroSection() {
               </a>
               .
             </p>
-            {/* <p>
+            <p>
               Do you enjoy searching for companies in Brønnøysund? Now you can
-              do it marginally faster!
-            </p> */}
+              do it marginally{" "}
+              <Link to="/brreg" className="text-green-800 hover:text-green-600">
+                {" "}
+                faster!
+              </Link>
+            </p>
           </div>
         </div>
       </div>
