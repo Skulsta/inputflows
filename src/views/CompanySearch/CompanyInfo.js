@@ -7,20 +7,20 @@ export default function Info(props) {
   if (expanded) {
     expandedContent = (
       <div className="space-y-2 pt-2 text-gray-800">
-        <p> Organization number: {props.org} </p>
-        <p> Description: {props.beskriv2} </p>
-        <p> Industry code: {props.beskriv1} </p>
-        <p style={{ display: !props.sted && "none" }}>
+        <p> Organization number: {props.organizationNumber} </p>
+        <p> Description: {props.description} </p>
+        <p> Industry code: {props.industryCode} </p>
+        <p style={{ display: !props.postal && "none" }}>
           {" "}
-          Postal: {props.sted2} {props.sted}
+          Postal: {props.postalNumber} {props.postal}
         </p>{" "}
-        <p style={{ display: !props.sted1 && "none" }}>
-          Address: {props.sted1}
+        <p style={{ display: !props.address && "none" }}>
+          Address: {props.address}
         </p>
-        <p style={{ display: !props.epost && "none" }}>Email:{props.epost}</p>
-        <p style={{ display: !props.hjemmeside && "none" }}>
+        <p style={{ display: !props.email && "none" }}>Email:{props.email}</p>
+        <p style={{ display: !props.website && "none" }}>
           <a
-            href={"https://" + props.hjemmeside}
+            href={"https://" + props.website}
             target="_blank"
             rel="noreferrer"
             className="text-green-800 hover:text-green-600"
@@ -31,7 +31,7 @@ export default function Info(props) {
         <p
           id="konkurs"
           className="text-red-800"
-          style={{ display: !props.konkurs && "none" }}
+          style={{ display: !props.bankrups && "none" }}
         >
           The company is bankrupt
         </p>
@@ -43,7 +43,7 @@ export default function Info(props) {
     <div className="w-min">
       <h3 className="cursor-pointer" onClick={() => setExpanded(!expanded)}>
         {" "}
-        {props.navn}{" "}
+        {props.name}{" "}
       </h3>
       {expandedContent}
     </div>

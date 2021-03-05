@@ -7,20 +7,20 @@ export default function SearchResults(props) {
       <div key={item.organisasjonsnummer}>
         <div className="inline-block border w-full p-4 rounded border-green-800 border-opacity-25">
           <CompanyInfo
-            navn={item.navn}
-            org={item.organisasjonsnummer}
-            beskriv1={item.naeringskode1 && item.naeringskode1.beskrivelse}
-            beskriv2={
+            name={item.navn}
+            organizationNumber={item.organisasjonsnummer}
+            description={item.naeringskode1 && item.naeringskode1.beskrivelse}
+            industryCode={
               item.organisasjonsform && item.organisasjonsform.beskrivelse
             }
-            sted={item.forretningsadresse && item.forretningsadresse.poststed}
-            sted1={item.forretningsadresse && item.forretningsadresse.adresse}
-            sted2={
+            postal={item.forretningsadresse && item.forretningsadresse.poststed}
+            address={item.forretningsadresse && item.forretningsadresse.adresse}
+            postalNumber={
               item.forretningsadresse && item.forretningsadresse.postnummer
             }
-            epost={""}
-            hjemmeside={item.hjemmeside}
-            konkurs={item.konkurs}
+            email={""}
+            website={item.hjemmeside}
+            bankrupt={item.konkurs}
           />
         </div>
       </div>

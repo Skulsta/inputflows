@@ -22,10 +22,10 @@ export default function SearchInput() {
       .then((response) => response.json())
       .then((data) => {
         const enheter = data._embedded && data._embedded.enheter;
-        if (enheter && event.target.value.length > 2) {
-          setSearchData(enheter);
-        } else if (event.target.value.length === 0) {
+        if (event.target.value.length === 0) {
           setSearchData([]);
+        } else {
+          setSearchData(enheter);
         }
       });
 
@@ -35,7 +35,7 @@ export default function SearchInput() {
   return (
     <div className="space-y-10">
       <input
-        className="border px-4 py-2 focus:outline-none w-full rounded border-green-800 border-opacity-25 hover:border-opacity-50 focus:border-opacity-50"
+        className="border text-gray-800 px-4 py-2 focus:outline-none w-full rounded border-green-800 border-opacity-25 hover:border-opacity-50 focus:border-opacity-50"
         type="text"
         placeholder="Company name or organization number"
         onChange={HandleSearch}
