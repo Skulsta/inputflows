@@ -7,23 +7,23 @@ export default function Info(props) {
   if (expanded) {
     expandedContent = (
       <div>
-        <span> OrgNr: {props.org} </span>
+        <span> Organization number: {props.org} </span>
         <br />
-        <span> Beskrivelse: {props.beskriv2} </span>
+        <span> Description: {props.beskriv2} </span>
         <br />
-        <span> Næringskode beskrivelse: {props.beskriv1} </span>
+        <span> Industry code: {props.beskriv1} </span>
         <br />
         <span style={{ display: !props.sted && "none" }}>
           {" "}
-          PostSted: {props.sted2} {props.sted}
+          Postal: {props.sted2} {props.sted}
           <br />
         </span>{" "}
         <span style={{ display: !props.sted1 && "none" }}>
-          Adresse: {props.sted1}
+          Address: {props.sted1}
           <br />
         </span>
         <span style={{ display: !props.epost && "none" }}>
-          E-post:{props.epost}
+          Email:{props.epost}
           <br />
         </span>
         <span style={{ display: !props.hjemmeside && "none" }}>
@@ -31,13 +31,18 @@ export default function Info(props) {
             href={"https://" + props.hjemmeside}
             target="_blank"
             rel="noreferrer"
+            className="text-green-800 hover:text-green-600"
           >
             Go to website
           </a>
           <br />
         </span>
-        <span id="konkurs" style={{ display: !props.konkurs && "none" }}>
-          Selskapet har gått konkurs.
+        <span
+          id="konkurs"
+          className="text-red-800"
+          style={{ display: !props.konkurs && "none" }}
+        >
+          The company is bankrupt
         </span>
       </div>
     );

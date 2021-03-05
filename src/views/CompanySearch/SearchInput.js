@@ -41,13 +41,7 @@ export default function SearchInput() {
         onChange={HandleSearch}
         value={data}
       />
-      {data.length < 3 ? (
-        <p className="text-center text-gray-700">
-          Start typing a company name or paste in an organization number
-        </p>
-      ) : (
-        <SearchResults data={fetchedData} />
-      )}
+      <SearchResults data={fetchedData} />
     </div>
   );
 }
