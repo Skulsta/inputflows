@@ -37,6 +37,11 @@ function App() {
                 </Link>
               </div>
               <div>
+                <Link to="/brreg" className="hover:text-green-200">
+                  Search
+                </Link>
+              </div>
+              <div>
                 <a
                   className="hover:text-green-200"
                   href="https://github.com/Skulsta/inputflows"
