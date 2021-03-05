@@ -18,7 +18,6 @@ export default function SearchResults(props) {
             postalNumber={
               item.forretningsadresse && item.forretningsadresse.postnummer
             }
-            email={""}
             website={item.hjemmeside}
             bankrupt={item.konkurs}
           />

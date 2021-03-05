@@ -31,7 +31,7 @@ export default function Info(props) {
         <p
           id="konkurs"
           className="text-red-800"
-          style={{ display: !props.bankrups && "none" }}
+          style={{ display: !props.bankrupt && "none" }}
         >
           The company is bankrupt
         </p>
