@@ -41,7 +41,7 @@ export default function OnePost() {
 
   return (
     <div className="min-h-screen max-w-screen-2xl">
-      <div className="container shadow-xl mx-auto bg-green-800 bg-opacity-25 rounded-lg sm:mt-8">
+      <div className="container shadow-xl mx-auto mb-8 bg-green-800 bg-opacity-25 rounded-lg sm:mt-8">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-4">
             <div className="bg-white bg-opacity-75 rounded p-8 w-full text-center">
