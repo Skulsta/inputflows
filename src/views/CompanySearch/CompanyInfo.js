@@ -44,11 +44,8 @@ export default function Info(props) {
   }
 
   return (
-    <div>
-      <h3 className="Navn" onClick={() => setExpanded(!expanded)}>
-        {" "}
-        {props.navn}{" "}
-      </h3>
+    <div className="w-min">
+      <h3 onClick={() => setExpanded(!expanded)}> {props.navn} </h3>
       {expandedContent}
     </div>
   );
