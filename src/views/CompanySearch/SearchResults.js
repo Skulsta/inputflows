@@ -2,24 +2,31 @@ import CompanyInfo from "./CompanyInfo";
 
 export default function SearchResults(props) {
   let fetchedArray = props.data;
-  const print = fetchedArray.map((item) => {
+  const print = fetchedArray.map((company) => {
     return (
-      <div key={item.organisasjonsnummer}>
+      <div key={company.organisasjonsnummer}>
         <div className="inline-block border w-full p-4 rounded border-green-800 border-opacity-25">
           <CompanyInfo
-            name={item.navn}
-            organizationNumber={item.organisasjonsnummer}
-            description={item.naeringskode1 && item.naeringskode1.beskrivelse}
+            name={company.navn}
+            organizationNumber={company.organisasjonsnummer}
+            description={
+              company.naeringskode1 && company.naeringskode1.beskrivelse
+            }
             industryCode={
-              item.organisasjonsform && item.organisasjonsform.beskrivelse
+              company.organisasjonsform && company.organisasjonsform.beskrivelse
             }
-            postal={item.forretningsadresse && item.forretningsadresse.poststed}
-            address={item.forretningsadresse && item.forretningsadresse.adresse}
+            postal={
+              company.forretningsadresse && company.forretningsadresse.poststed
+            }
+            address={
+              company.forretningsadresse && company.forretningsadresse.adresse
+            }
             postalNumber={
-              item.forretningsadresse && item.forretningsadresse.postnummer
+              company.forretningsadresse &&
+              company.forretningsadresse.postnummer
             }
-            website={item.hjemmeside}
-            bankrupt={item.konkurs}
+            website={company.hjemmeside}
+            bankrupt={company.konkurs}
           />
         </div>
       </div>

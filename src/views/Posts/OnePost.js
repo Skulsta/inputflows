@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
 import Moment from "moment";
-import sanityClient from "../client.js";
+import sanityClient from "../../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import GoBack from "../assets/icons/back-arrow.svg";
+import GoBack from "../../assets/icons/back-arrow.svg";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {

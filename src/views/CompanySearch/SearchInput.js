@@ -21,11 +21,11 @@ export default function SearchInput() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const enheter = data._embedded && data._embedded.enheter;
+        const companies = data._embedded && data._embedded.enheter;
         if (event.target.value.length === 0) {
           setSearchData([]);
         } else {
-          setSearchData(enheter);
+          setSearchData(companies);
         }
       });
 

@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-import AllPosts from "./components/AllPosts";
-import OnePost from "./components/OnePost";
+import Posts from "./views/Posts/Posts";
+import OnePost from "./views/Posts/OnePost";
 import CompanySearch from "./views/CompanySearch/CompanySearch";
-import HeroSection from "./views/Home/HeroSection";
+import Home from "./views/Home/Home";
 import ScrollToTop from "./utilities/ScrollToTop";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
       <ScrollToTop />
       <NavigationBar />
       <Switch>
-        <Route component={HeroSection} path="/" exact />
-        <Route component={AllPosts} path="/posts" exact />
+        <Route component={Home} path="/" exact />
+        <Route component={Posts} path="/posts" exact />
         <Route component={OnePost} path="/posts/:slug" />
         <Route component={CompanySearch} path="/brreg" />
       </Switch>
