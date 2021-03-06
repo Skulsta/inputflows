@@ -61,7 +61,7 @@ export default function HeroSection() {
               {" "}
               posts section
             </Link>
-            . The data for the posts are handled with an implementation of
+            . This was made with an implementation of
             <a
               href="https://sanity.io"
               target="_blank"
