@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BlockContent from "@sanity/block-content-to-react";
 import Moment from "moment";
 import sanityClient from "../../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import GoBack from "../../assets/icons/back-arrow.svg";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -70,7 +69,7 @@ export default function OnePost() {
             style={{ height: "400px" }}
           />
         </div>
-        <div className="px-4 sm:px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-4 sm:px-16 prose lg:px-48 py-12 lg:py-20 max-w-full">
           <BlockContent
             blocks={postData.body}
             projectId={sanityClient.clientConfig.projectId}
