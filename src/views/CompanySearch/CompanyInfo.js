@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import DownArrow from "../../assets/icons/down-arrow.svg";
+import UpArrow from "../../assets/icons/up-arrow.svg";
 
 export default function Info(props) {
   const [expanded, setExpanded] = useState(false);
@@ -6,7 +8,7 @@ export default function Info(props) {
 
   if (expanded) {
     expandedContent = (
-      <div className="space-y-2 pt-2 text-gray-800">
+      <div className="space-y-2 pt-2 text-gray-700">
         <p>Organization number: {props.organizationNumber} </p>
         {props.description && <p>Description: {props.description} </p>}
         <p>Industry code: {props.industryCode} </p>
@@ -36,10 +38,18 @@ export default function Info(props) {
   }
 
   return (
-    <div className="">
-      <h3 className="cursor-pointer" onClick={() => setExpanded(!expanded)}>
-        {props.name}
-      </h3>
+    <div>
+      <div
+        className="flex justify-between cursor-pointer text-gray-800"
+        onClick={() => setExpanded(!expanded)}
+      >
+        <h3>{props.name}</h3>
+        {expanded ? (
+          <img src={UpArrow} alt="close icon" />
+        ) : (
+          <img src={DownArrow} alt="open icon" />
+        )}
+      </div>
       {expandedContent}
     </div>
   );
