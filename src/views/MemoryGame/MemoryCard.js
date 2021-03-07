@@ -1,35 +1,61 @@
 import React, { useState, useEffect } from "react";
-import { useSpring, animated as ani } from "react-spring";
 
-export default function MemoryGame(
+const MemoryCard = ({
   id,
   color,
   game,
   flippedCount,
   setFlippedCount,
   flippedIndexes,
-  setFlippedIndexes
-) {
+  setFlippedIndexes,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const { transform, opacity } = useSpring({
-    opacity: isFlipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${isFlipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
 
   useEffect(() => {
-    console.log("Flipped Indexes Changed");
+    if (flippedIndexes[2] === true && flippedIndexes.indexOf(id) > -1) {
+      setTimeout(() => {
+        setIsFlipped(!isFlipped);
+        setFlippedCount(flippedCount + 1);
+        setFlippedIndexes([]);
+      }, 1000);
+    } else if (flippedIndexes[2] === false && id === 0) {
+      setFlippedCount(flippedCount + 1);
+      setFlippedIndexes([]);
+    }
   }, [flippedIndexes]);
 
   const onCardClick = () => {
-    console.log("Card Clicked");
-    setIsFlipped((state) => !state);
+    console.log(game);
+    if (!game[id].flipped && flippedCount % 3 === 0) {
+      setIsFlipped(!isFlipped);
+      setFlippedCount(flippedCount + 1);
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(id);
+      setFlippedIndexes(newIndexes);
+    } else if (
+      flippedCount % 3 === 1 &&
+      !game[id].flipped &&
+      flippedIndexes.indexOf(id) < 0
+    ) {
+      setIsFlipped(!isFlipped);
+      setFlippedCount(flippedCount + 1);
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(id);
+      setFlippedIndexes(newIndexes);
+    }
   };
 
   return (
     <div
       onClick={onCardClick}
-      className={`${isFlipped && "border-red-800"} border px-8 py-24`}
-    ></div>
+      className={`${
+        !isFlipped ? "bg-green-800 bg-opacity-25" : "bg-gray-300"
+      } flex justify-center items-center border cursor-pointer h-56`}
+      style={{ background: isFlipped && color }}
+    >
+      {!isFlipped && <div className="text-2xl cursive">Inputflows</div>}
+    </div>
   );
-}
+};
+
+export default MemoryCard;

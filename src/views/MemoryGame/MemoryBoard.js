@@ -27,14 +27,14 @@ export default function MemoryBoard() {
     for (let i = 0; i < numberOfCards / 2; i++) {
       const firstCard = {
         id: 2 * i,
-        pairId: i,
-        cardFace: colors[i],
+        colorId: i,
+        color: colors[i],
         flipped: false,
       };
       const secondCard = {
         id: 2 * i + 1,
-        pairId: i,
-        cardFace: colors[i],
+        colorId: i,
+        color: colors[i],
         flipped: false,
       };
 
@@ -42,7 +42,8 @@ export default function MemoryBoard() {
       newGame.push(secondCard);
     }
 
-    setGame(newGame.sort(() => Math.random() - 0.5));
+    const shuffledGame = newGame.sort(() => Math.random() - 0.5);
+    setGame(shuffledGame);
   }, []);
 
   useEffect(() => {
@@ -50,24 +51,44 @@ export default function MemoryBoard() {
   }, [game]);
 
   if (flippedIndexes.length === 2) {
-    // Runs if two cards have been flipped
+    console.log(flippedIndexes);
+    const match =
+      game[flippedIndexes[0]].colorId === game[flippedIndexes[1]].colorId;
+
+    if (match) {
+      const newGame = [...game];
+      newGame[flippedIndexes[0]].flipped = true;
+      newGame[flippedIndexes[1]].flipped = true;
+      setGame(newGame);
+
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(false);
+      setFlippedIndexes(newIndexes);
+    } else {
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(true);
+      setFlippedIndexes(newIndexes);
+    }
   }
 
-  return (
-    <div className="mt-8 grid grid-cols-3 gap-4">
-      {game.map((card, index) => (
-        <div className="card" key={index}>
-          <MemoryCard
-            id={index}
-            color={card.color}
-            game={game}
-            flippedCount={flippedCount}
-            setFlippedCount={setFlippedCount}
-            flippedIndexes={flippedIndexes}
-            setFlippedIndexes={setFlippedIndexes}
-          />
-        </div>
-      ))}
-    </div>
-  );
+  if (game.length === 0) return <div>Loading...</div>;
+  else {
+    return (
+      <div className="mt-8 grid grid-cols-3 gap-4">
+        {game.map((card, index) => (
+          <div key={index}>
+            <MemoryCard
+              id={index}
+              color={card.color}
+              game={game}
+              flippedCount={flippedCount}
+              setFlippedCount={setFlippedCount}
+              flippedIndexes={flippedIndexes}
+              setFlippedIndexes={setFlippedIndexes}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
 }

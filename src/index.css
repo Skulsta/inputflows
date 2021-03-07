@@ -6,3 +6,7 @@
   font-family: "Amatic SC", cursive;
   font-weight: 700;
 }
+
+.brand-green {
+  color: rgba(6, 95, 70, var(25%));
+}
