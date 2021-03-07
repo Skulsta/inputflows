@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import MemoryCard from "./MemoryCard";
 
 export default function MemoryBoard() {
   const [game, setGame] = useState([]);
@@ -52,9 +53,6 @@ export default function MemoryBoard() {
     // Runs if two cards have been flipped
   }
 
-  function Card(props) {
-    return <div>Card here</div>;
-  }
   return (
     <div className="mt-8 grid grid-cols-3 gap-4">
       <div className="p-12 border"></div>
@@ -62,7 +60,7 @@ export default function MemoryBoard() {
       <div className="p-12 border"></div>
       {game.map((card, index) => (
         <div className="card" key={index}>
-          <Card
+          <MemoryCard
             id={index}
             color={card.color}
             game={game}
