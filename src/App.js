@@ -7,6 +7,7 @@ import OnePost from "./views/Posts/OnePost";
 import CompanySearch from "./views/CompanySearch/CompanySearch";
 import Home from "./views/Home/Home";
 import ScrollToTop from "./utilities/ScrollToTop";
+import MemoryGame from "./views/MemoryGame/MemoryGame";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route component={Posts} path="/posts" exact />
         <Route component={OnePost} path="/posts/:slug" />
         <Route component={CompanySearch} path="/brreg" />
+        <Route component={MemoryGame} path="/memory" />
       </Switch>
       <Footer />
     </BrowserRouter>
