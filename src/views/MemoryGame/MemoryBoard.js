@@ -55,9 +55,6 @@ export default function MemoryBoard() {
 
   return (
     <div className="mt-8 grid grid-cols-3 gap-4">
-      <div className="p-12 border"></div>
-      <div className="p-12 border"></div>
-      <div className="p-12 border"></div>
       {game.map((card, index) => (
         <div className="card" key={index}>
           <MemoryCard
