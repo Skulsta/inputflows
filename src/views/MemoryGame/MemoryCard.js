@@ -9,22 +9,22 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
         setIsFlipped(!isFlipped);
         setFlippedIndexes([]);
       }, 1000);
-    } else if (flippedIndexes[2] === false && id === 0) {
-      setFlippedIndexes([]);
     }
   }, [flippedIndexes]);
 
   const onCardClick = () => {
-    if (!game[id].flipped && flippedIndexes.length === 0) {
-      setIsFlipped(!isFlipped);
-      const newIndexes = [...flippedIndexes];
-      newIndexes.push(id);
-      setFlippedIndexes(newIndexes);
-    } else if (!game[id].flipped && flippedIndexes.indexOf(id) < 0) {
-      setIsFlipped(!isFlipped);
-      const newIndexes = [...flippedIndexes];
-      newIndexes.push(id);
-      setFlippedIndexes(newIndexes);
+    if (!game[id].flipped && flippedIndexes.length < 2) {
+      if (!game[id].flipped && flippedIndexes.length === 0) {
+        setIsFlipped(!isFlipped);
+        const newIndexes = [...flippedIndexes];
+        newIndexes.push(id);
+        setFlippedIndexes(newIndexes);
+      } else if (!game[id].flipped && flippedIndexes.indexOf(id) < 0) {
+        setIsFlipped(!isFlipped);
+        const newIndexes = [...flippedIndexes];
+        newIndexes.push(id);
+        setFlippedIndexes(newIndexes);
+      }
     }
   };
 

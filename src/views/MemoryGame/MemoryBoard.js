@@ -53,9 +53,7 @@ export default function MemoryBoard() {
       newGame[flippedIndexes[1]].flipped = true;
       setGame(newGame);
 
-      const newIndexes = [...flippedIndexes];
-      newIndexes.push(false);
-      setFlippedIndexes(newIndexes);
+      setFlippedIndexes([]);
     } else {
       const newIndexes = [...flippedIndexes];
       newIndexes.push(true);
