@@ -26,13 +26,11 @@ export default function MemoryBoard() {
     const newGame = [];
     for (let i = 0; i < numberOfCards / 2; i++) {
       const firstCard = {
-        id: 2 * i,
         colorId: i,
         color: colors[i],
         flipped: false,
       };
       const secondCard = {
-        id: 2 * i + 1,
         colorId: i,
         color: colors[i],
         flipped: false,
@@ -45,10 +43,6 @@ export default function MemoryBoard() {
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
     setGame(shuffledGame);
   }, []);
-
-  useEffect(() => {
-    // Loads when the game variable changes
-  }, [game]);
 
   if (flippedIndexes.length === 2) {
     console.log(flippedIndexes);
