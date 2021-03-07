@@ -1,4 +1,5 @@
 import React from "react";
+import MemoryBoard from "./MemoryBoard";
 
 export default function MemoryGame() {
   return (
@@ -7,6 +8,7 @@ export default function MemoryGame() {
         <h2 className="text-2xl font-light text-green-800 text-opacity-75">
           Memory Game
         </h2>
+        <MemoryBoard />
       </div>
     </div>
   );
