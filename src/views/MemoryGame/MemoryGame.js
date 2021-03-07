@@ -3,9 +3,14 @@ import MemoryBoard from "./MemoryBoard";
 
 export default function MemoryGame() {
   return (
-    <div className="max-w-screen-xl mx-auto py-20 min-h-screen">
+    <div className="max-w-screen-xl mx-auto pb-8 min-h-screen">
       <div className="px-4 max-w-xl mx-auto">
-        <h2 className="text-2xl font-light text-gray-800">Memory Game</h2>
+        <div className="items-center my-8 space-y-4">
+          <h2 className="text-2xl text-gray-800">
+            Let's test your short-term memory
+          </h2>
+          <p className="text-gray-800">Flip a card to get started</p>
+        </div>
         <MemoryBoard />
       </div>
     </div>

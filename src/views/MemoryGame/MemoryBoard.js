@@ -3,7 +3,6 @@ import MemoryCard from "./MemoryCard";
 
 export default function MemoryBoard() {
   const [game, setGame] = useState([]);
-  const [flippedCount, setFlippedCount] = useState(0);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
   const numberOfCards = 12;
 
@@ -26,12 +25,12 @@ export default function MemoryBoard() {
     const newGame = [];
     for (let i = 0; i < numberOfCards / 2; i++) {
       const firstCard = {
-        colorId: i,
+        pairId: i,
         color: colors[i],
         flipped: false,
       };
       const secondCard = {
-        colorId: i,
+        pairId: i,
         color: colors[i],
         flipped: false,
       };
@@ -45,11 +44,10 @@ export default function MemoryBoard() {
   }, []);
 
   if (flippedIndexes.length === 2) {
-    console.log(flippedIndexes);
-    const match =
-      game[flippedIndexes[0]].colorId === game[flippedIndexes[1]].colorId;
+    const isMatch =
+      game[flippedIndexes[0]].pairId === game[flippedIndexes[1]].pairId;
 
-    if (match) {
+    if (isMatch) {
       const newGame = [...game];
       newGame[flippedIndexes[0]].flipped = true;
       newGame[flippedIndexes[1]].flipped = true;
@@ -68,15 +66,13 @@ export default function MemoryBoard() {
   if (game.length === 0) return <div>Loading...</div>;
   else {
     return (
-      <div className="mt-8 grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {game.map((card, index) => (
           <div key={index}>
             <MemoryCard
               id={index}
               color={card.color}
               game={game}
-              flippedCount={flippedCount}
-              setFlippedCount={setFlippedCount}
               flippedIndexes={flippedIndexes}
               setFlippedIndexes={setFlippedIndexes}
             />

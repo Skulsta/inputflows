@@ -15,7 +15,6 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
   }, [flippedIndexes]);
 
   const onCardClick = () => {
-    console.log(game);
     if (!game[id].flipped && flippedIndexes.length === 0) {
       setIsFlipped(!isFlipped);
       const newIndexes = [...flippedIndexes];
@@ -34,7 +33,7 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
       onClick={onCardClick}
       className={`${
         !isFlipped ? "bg-green-800 bg-opacity-25" : "bg-gray-300"
-      } flex justify-center items-center border cursor-pointer h-56`}
+      } flex justify-center items-center border cursor-pointer h-40`}
       style={{ background: isFlipped && color }}
     >
       {!isFlipped && <div className="text-2xl cursive">Inputflows</div>}
