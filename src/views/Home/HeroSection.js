@@ -80,7 +80,7 @@ export default function HeroSection() {
               {" "}
               faster!{" "}
             </Link>{" "}
-            Or play a few rounds of a simple version of the{" "}
+            Or play a simple version of the{" "}
             <Link to="/memory" className="text-green-800 hover:text-green-600">
               {" "}
               Memory Game
