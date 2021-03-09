@@ -81,6 +81,14 @@ export default function HeroSection() {
               faster!
             </Link>
           </p>
+          <p>
+            What you're really here for is of course to play the{" "}
+            <Link to="/memory" className="text-green-800 hover:text-green-600">
+              {" "}
+              Memory Game
+            </Link>
+            .
+          </p>
         </div>
       </div>
     </div>

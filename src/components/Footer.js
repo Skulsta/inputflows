@@ -23,6 +23,11 @@ export default function Footer() {
             </Link>
           </div>
           <div>
+            <Link to="/memory" className="hover:text-green-200">
+              Memory
+            </Link>
+          </div>
+          <div>
             <a
               className="hover:text-green-200"
               href="https://github.com/Skulsta/inputflows"
