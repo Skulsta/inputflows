@@ -16,18 +16,15 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
   }, [flippedIndexes]);
 
   const onCardClick = () => {
-    if (!game[id].flipped && flippedIndexes.length < 2) {
-      if (!game[id].flipped && flippedIndexes.length === 0) {
-        setIsFlipped(!isFlipped);
-        const newIndexes = [...flippedIndexes];
-        newIndexes.push(id);
-        setFlippedIndexes(newIndexes);
-      } else if (!game[id].flipped && flippedIndexes.indexOf(id) < 0) {
-        setIsFlipped(!isFlipped);
-        const newIndexes = [...flippedIndexes];
-        newIndexes.push(id);
-        setFlippedIndexes(newIndexes);
-      }
+    if (
+      !game[id].flipped &&
+      flippedIndexes.indexOf(id) < 0 &&
+      flippedIndexes.length < 2
+    ) {
+      setIsFlipped(!isFlipped);
+      const newIndexes = [...flippedIndexes];
+      newIndexes.push(id);
+      setFlippedIndexes(newIndexes);
     }
   };
 

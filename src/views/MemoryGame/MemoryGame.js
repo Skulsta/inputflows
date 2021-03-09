@@ -1,7 +1,7 @@
 import React from "react";
 import MemoryBoard from "./MemoryBoard";
 
-export default function MemoryGame() {
+const MemoryGame = () => {
   return (
     <div className="max-w-screen-xl mx-auto pb-8 min-h-screen">
       <div className="px-4 max-w-xl mx-auto">
@@ -14,4 +14,6 @@ export default function MemoryGame() {
       </div>
     </div>
   );
-}
+};
+
+export default MemoryGame;

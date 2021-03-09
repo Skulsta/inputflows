@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MemoryCard from "./MemoryCard";
 
-export default function MemoryBoard() {
+const MemoryBoard = () => {
   const [game, setGame] = useState([]);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
   const numberOfCards = 12;
@@ -98,4 +98,6 @@ export default function MemoryBoard() {
       </div>
     );
   }
-}
+};
+
+export default MemoryBoard;
