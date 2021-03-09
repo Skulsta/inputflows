@@ -40,7 +40,7 @@ export default function MemoryBoard() {
     }
 
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
-    setGame(shuffledGame);
+    setGame(newGame);
   }, []);
 
   if (flippedIndexes.length === 2) {
@@ -51,7 +51,9 @@ export default function MemoryBoard() {
       const newGame = [...game];
       newGame[flippedIndexes[0]].flipped = true;
       newGame[flippedIndexes[1]].flipped = true;
-      setGame(newGame);
+      game.some((card) => card.flipped === false)
+        ? setGame(newGame)
+        : console.log("Done!");
 
       setFlippedIndexes([]);
     } else {
