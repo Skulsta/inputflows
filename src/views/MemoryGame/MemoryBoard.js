@@ -23,12 +23,10 @@ export default function MemoryBoard() {
     const newGame = [];
     for (let i = 0; i < numberOfCards / 2; i++) {
       const firstCard = {
-        pairId: i,
         color: colors[i],
         flipped: false,
       };
       const secondCard = {
-        pairId: i,
         color: colors[i],
         flipped: false,
       };
@@ -51,7 +49,7 @@ export default function MemoryBoard() {
 
   if (flippedIndexes.length === 2) {
     const isMatch =
-      game[flippedIndexes[0]].pairId === game[flippedIndexes[1]].pairId;
+      game[flippedIndexes[0]].color === game[flippedIndexes[1]].color;
 
     if (isMatch) {
       const newGame = [...game];
