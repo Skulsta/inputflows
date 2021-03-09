@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
+const MemoryCard = ({
+  id,
+  color,
+  game,
+  flippedIndexes,
+  setFlippedIndexes,
+  gameCompleted,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   useEffect(() => {
@@ -8,7 +15,10 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
       setTimeout(() => {
         setIsFlipped(!isFlipped);
         setFlippedIndexes([]);
-      }, 1000);
+      }, 700);
+    } else if (flippedIndexes[0] === true) {
+      setIsFlipped(false);
+      setFlippedIndexes([]);
     }
   }, [flippedIndexes]);
 
@@ -33,7 +43,7 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
       onClick={onCardClick}
       className={`${
         !isFlipped ? "bg-green-800 bg-opacity-25" : "bg-gray-300"
-      } flex justify-center items-center border cursor-pointer h-40`}
+      } flex justify-center items-center border cursor-pointer h-40 duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105`}
       style={{ background: isFlipped && color }}
     >
       {!isFlipped && <div className="text-2xl cursive">Inputflows</div>}

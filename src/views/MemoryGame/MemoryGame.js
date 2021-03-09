@@ -9,7 +9,6 @@ export default function MemoryGame() {
           <h2 className="text-2xl text-gray-800">
             Let's test your short-term memory
           </h2>
-          <p className="text-gray-800">Flip a card to get started</p>
         </div>
         <MemoryBoard />
       </div>
