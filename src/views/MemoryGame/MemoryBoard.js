@@ -4,7 +4,6 @@ import MemoryCard from "./MemoryCard";
 export default function MemoryBoard() {
   const [game, setGame] = useState([]);
   const [flippedIndexes, setFlippedIndexes] = useState([]);
-  const [gameCompleted, setGameCompleted] = useState(false);
   const numberOfCards = 12;
 
   const colors = [
@@ -58,9 +57,7 @@ export default function MemoryBoard() {
       const newGame = [...game];
       newGame[flippedIndexes[0]].flipped = true;
       newGame[flippedIndexes[1]].flipped = true;
-      game.some((card) => card.flipped === false)
-        ? setGame(newGame)
-        : setGameCompleted(true);
+      setGame(newGame);
 
       setFlippedIndexes([]);
     } else {
@@ -96,7 +93,6 @@ export default function MemoryBoard() {
                 game={game}
                 flippedIndexes={flippedIndexes}
                 setFlippedIndexes={setFlippedIndexes}
-                gameCompleted={gameCompleted}
               />
             </div>
           ))}
