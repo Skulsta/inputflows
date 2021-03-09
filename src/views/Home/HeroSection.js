@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="justify-center items-center min-h-screen">
       <div className="flex p-4 pt-20 flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 max-w-screen-xl mx-auto">
-        <div className="p-8 border w-full bg-white border-none rounded lg:w-1/2 leading-loose space-y-8">
+        <div className="p-8 border w-full self-start bg-white border-none rounded lg:w-1/2 leading-loose space-y-8">
           <div>
             <h2 className="text-2xl text-center text-gray-800">
               Stian Skulstad
@@ -78,11 +78,9 @@ export default function HeroSection() {
             it marginally{" "}
             <Link to="/brreg" className="text-green-800 hover:text-green-600">
               {" "}
-              faster!
-            </Link>
-          </p>
-          <p>
-            What you're really here for is of course to play the{" "}
+              faster!{" "}
+            </Link>{" "}
+            Or play a few rounds of a simple version of the{" "}
             <Link to="/memory" className="text-green-800 hover:text-green-600">
               {" "}
               Memory Game
