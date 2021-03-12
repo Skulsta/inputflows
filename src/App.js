@@ -8,6 +8,7 @@ import CompanySearch from "./views/CompanySearch/CompanySearch";
 import Home from "./views/Home/Home";
 import ScrollToTop from "./utilities/ScrollToTop";
 import MemoryGame from "./views/MemoryGame/MemoryGame";
+import Playground from "./views/Playground/Playground";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route component={OnePost} path="/posts/:slug" />
         <Route component={CompanySearch} path="/brreg" />
         <Route component={MemoryGame} path="/memory" />
+        <Route component={Playground} path="/playground" />
       </Switch>
       <Footer />
     </BrowserRouter>
