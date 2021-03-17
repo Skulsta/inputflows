@@ -73,7 +73,7 @@ const OnePost = () => {
             style={{ height: "400px" }}
           />
         </div>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-4 sm:px-16 xl:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
           <BlockContent
             blocks={postData.body}
             projectId={sanityClient.clientConfig.projectId}
