@@ -10,7 +10,7 @@ const { REACT_APP_MIXPANEL_DEV, REACT_APP_MIXPANEL_PROD } = process.env;
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
     ? mixpanel.init(REACT_APP_MIXPANEL_PROD)
-    : mixpanel.init(REACT_APP_MIXPANEL_DEV);
+    : mixpanel.init("3efa8020cfd68b36a8a850b6ff26fc95");
 };
 
 ReactDOM.render(
