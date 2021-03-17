@@ -4,11 +4,12 @@ import mixpanel from "mixpanel-browser";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-require("dotenv").config();
+
+const functions = require("firebase-functions");
 
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
-    ? mixpanel.init(process.env.REACT_APP_MIXPANEL_PROD)
+    ? mixpanel.init(functions.config().mixpanel.key)
     : mixpanel.init("3efa8020cfd68b36a8a850b6ff26fc95");
 };
 
