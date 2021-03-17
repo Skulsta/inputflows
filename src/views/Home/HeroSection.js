@@ -6,8 +6,8 @@ import GitHubIcon from "../../assets/icons/github.svg";
 
 export default function HeroSection() {
   return (
-    <div className="justify-center items-center min-h-screen">
-      <div className="flex p-4 py-8 flex-col md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0 max-w-screen-xl mx-auto">
+    <div className="justify-center items-center">
+      <div className="flex px-4 flex-col md:flex-row justify-center md:space-x-4 space-y-4 md:space-y-0 max-w-screen-xl mx-auto">
         <div class="flex flex-col space-y-4 lg:w-1/3">
           <div className="p-8 border w-full self-start bg-white border-none rounded leading-loose space-y-8">
             <div>

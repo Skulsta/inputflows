@@ -39,8 +39,8 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen max-w-screen-2xl">
-      <div className="container shadow-xl mx-auto mb-8 bg-green-800 bg-opacity-25 rounded-lg sm:mt-8">
+    <div className="min-h-screen max-w-screen-2xl bg-gray-10">
+      <div className="container shadow-xl mx-auto mb-8 bg-green-800 bg-opacity-25 rounded-lg">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-4">
             <div className="bg-white bg-opacity-75 rounded p-8 w-full text-center">
