@@ -31111,6 +31111,15 @@ video {
   animation: bounce 1s infinite;
 }
 
+.cursive {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+}
+
+.brand-green {
+  color: rgba(6, 95, 70, var(25%));
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
