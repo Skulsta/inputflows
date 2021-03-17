@@ -36,7 +36,9 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
       } flex justify-center items-center border cursor-pointer h-40 duration-200 ease-in-out transform hover:shadow-lg sm:hover:-translate-y-1 sm:hover:scale-105`}
       style={{ background: isFlipped && color }}
     >
-      {!isFlipped && <div className="text-2xl cursive">Inputflows</div>}
+      {!isFlipped && (
+        <div className="text-xl cursive text-gray-800">Inputflows</div>
+      )}
     </div>
   );
 };
