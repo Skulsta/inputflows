@@ -25,7 +25,7 @@ export default function AllPosts() {
 
   return (
     <div className="bg-opacity-25">
-      <div className="flex max-w-screen-xl mx-auto justify-center sm:px-4">
+      <div className="flex max-w-screen-xl mx-auto justify-center px-4">
         <div>
           <h2 className="text-5xl flex cursive py-8">Posts</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
