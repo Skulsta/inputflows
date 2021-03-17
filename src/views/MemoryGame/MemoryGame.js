@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 import MemoryBoard from "./MemoryBoard";
 
 const MemoryGame = () => {
+  useEffect(() => {
+    mixpanel.track("MemoryGame view");
+  }, []);
   return (
     <div className="max-w-screen-xl mx-auto pb-8 min-h-screen">
       <div className="px-4 max-w-xl mx-auto">

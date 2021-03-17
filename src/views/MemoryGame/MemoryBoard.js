@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import mixpanel from "mixpanel-browser";
 import MemoryCard from "./MemoryCard";
 
 const MemoryBoard = () => {
@@ -40,6 +41,7 @@ const MemoryBoard = () => {
   };
 
   const resetGame = () => {
+    mixpanel.track("Reset game");
     const newIndexes = [];
     newIndexes.push(true);
     setFlippedIndexes(newIndexes);
