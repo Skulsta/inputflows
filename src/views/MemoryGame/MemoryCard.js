@@ -37,7 +37,7 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
       style={{ background: isFlipped && color }}
     >
       {!isFlipped && (
-        <div className="text-xl cursive text-gray-800">Inputflows</div>
+        <div className="text-xl cursive text-gray-700">Inputflows</div>
       )}
     </div>
   );
