@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import mixpanel from "mixpanel-browser";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import Posts from "./views/Posts/Posts";
@@ -11,6 +12,9 @@ import MemoryGame from "./views/MemoryGame/MemoryGame";
 import Playground from "./views/Playground/Playground";
 
 function App() {
+  process.env.NODE_ENV === "production"
+    ? mixpanel.init(process.env.REACT_APP_MIXPANEL_PROD)
+    : mixpanel.init(process.env.REACT_APP_MIXPANEL_DEV);
   return (
     <BrowserRouter>
       <ScrollToTop />

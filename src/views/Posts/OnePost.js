@@ -4,13 +4,14 @@ import BlockContent from "@sanity/block-content-to-react";
 import Moment from "moment";
 import sanityClient from "../../client.js";
 import imageUrlBuilder from "@sanity/image-url";
+import mixpanel from "mixpanel-browser";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
 }
 
-export default function OnePost() {
+const OnePost = () => {
   const [postData, setPostData] = useState(null);
   const { slug } = useParams();
 
@@ -32,7 +33,10 @@ export default function OnePost() {
           "publishedAt": publishedAt
        }`
       )
-      .then((data) => setPostData(data[0]))
+      .then((data) => {
+        setPostData(data[0]);
+        mixpanel.track("Post view", { Post: slug });
+      })
       .catch(console.error);
   }, [slug]);
 
@@ -79,4 +83,6 @@ export default function OnePost() {
       </div>
     </div>
   );
-}
+};
+
+export default OnePost;
