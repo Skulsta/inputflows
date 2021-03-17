@@ -9,7 +9,7 @@ const { REACT_APP_MIXPANEL_DEV, REACT_APP_MIXPANEL_PROD } = process.env;
 
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
-    ? mixpanel.init(REACT_APP_MIXPANEL_PROD) // You found my secret.
+    ? mixpanel.init(REACT_APP_MIXPANEL_PROD)
     : mixpanel.init(REACT_APP_MIXPANEL_DEV);
 };
 
