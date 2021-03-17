@@ -14,7 +14,7 @@ import Playground from "./views/Playground/Playground";
 function App() {
   process.env.NODE_ENV === "production"
     ? mixpanel.init(process.env.REACT_APP_MIXPANEL_PROD)
-    : mixpanel.init(process.env.REACT_APP_MIXPANEL_DEV);
+    : mixpanel.init("3efa8020cfd68b36a8a850b6ff26fc95");
   return (
     <BrowserRouter>
       <ScrollToTop />
