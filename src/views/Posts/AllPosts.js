@@ -27,7 +27,7 @@ export default function AllPosts() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center px-4">
         <div>
-          <h2 className="text-4xl flex py-8">Posts</h2>
+          <h2 className="text-gray-800 text-3xl flex py-8">Posts</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allPostsData &&
               allPostsData.map((post, index) => (
