@@ -45,7 +45,7 @@ export default function HeroSection() {
           <div className="p-8 border text-center  w-full self-start bg-white border-none rounded leading-loose space-y-8">
             <div>
               <p>
-                In the name of open source, the code for this site can be found
+                In the name of open source, all code on this site can be found
                 on
                 <a
                   href="https://github.com/Skulsta/inputflows"
