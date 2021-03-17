@@ -5,11 +5,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const functions = require("firebase-functions");
-
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
-    ? mixpanel.init(functions.config().mixpanel.key)
+    ? mixpanel.init("079147d19395976fb3ef8dbb8f85c1d9") // You found my secret.
     : mixpanel.init("3efa8020cfd68b36a8a850b6ff26fc95");
 };
 
