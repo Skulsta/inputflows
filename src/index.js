@@ -4,6 +4,7 @@ import mixpanel from "mixpanel-browser";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+require("dotenv").config();
 
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
