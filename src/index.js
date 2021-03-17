@@ -5,10 +5,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const { REACT_APP_MIXPANEL_DEV, REACT_APP_MIXPANEL_PROD } = process.env;
+
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
-    ? mixpanel.init("079147d19395976fb3ef8dbb8f85c1d9") // You found my secret.
-    : mixpanel.init("3efa8020cfd68b36a8a850b6ff26fc95");
+    ? mixpanel.init(REACT_APP_MIXPANEL_PROD) // You found my secret.
+    : mixpanel.init(REACT_APP_MIXPANEL_DEV);
 };
 
 ReactDOM.render(
