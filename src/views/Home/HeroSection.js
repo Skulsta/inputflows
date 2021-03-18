@@ -7,7 +7,7 @@ import ProfileImage from "../../assets/images/inputflows_profile.jpeg";
 export default function HeroSection() {
   return (
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto">
-      <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose">
+      <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose text-gray-800">
         <h2 className="text-2xl text-blue-600">
           My background - in four paragraphs ⏱
         </h2>
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <h2 className="text-2xl text-turquoise-600 text-center text-gray-800">
               Stian Skulstad
             </h2>
-            <p className="text-lg text-center text-gray-700">
+            <p className="text-lg text-center text-gray-600">
               stian.skulstad@gmail.com
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="p-8 border text-center my-4 w-full self-start bg-white border-none rounded leading-loose space-y-8">
+        <div className="p-8 border text-gray-800 text-center my-4 w-full self-start bg-white border-none rounded leading-loose space-y-8">
           <div>
             <p>
               In the name of open source, all the code on this site can be found
