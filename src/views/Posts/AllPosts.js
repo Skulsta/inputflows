@@ -45,7 +45,7 @@ export default function AllPosts() {
                       alt=""
                     />
                     <span className="relative h-full flex justify-end items-end pb-4">
-                      <h2 className="text-gray-800 text-2xl font-bold px-3 py-4 bg-white bg-opacity-75">
+                      <h2 className="text-gray-800 text-2xl px-3 py-4 bg-white bg-opacity-75">
                         {post.title}
                       </h2>
                     </span>
