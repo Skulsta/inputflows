@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto">
       <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose">
-        <h2 className="text-2xl text-gray-800">
+        <h2 className="text-2xl text-blue-800">
           My background - in four paragraphs ⏱
         </h2>
         <p>
@@ -47,7 +47,7 @@ export default function HeroSection() {
             />
           </div>
           <div>
-            <h2 className="text-2xl text-turquoise-600 text-center">
+            <h2 className="text-2xl text-turquoise-600 text-center text-blue-800">
               Stian Skulstad
             </h2>
             <p className="text-lg text-center text-gray-700">
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 href="https://github.com/Skulsta/inputflows"
                 target="_blank"
                 rel="noreferrer"
-                className="text-green-800 hover:text-green-600"
+                className="text-green-900 hover:text-green-700"
               >
                 {" "}
                 GitHub
