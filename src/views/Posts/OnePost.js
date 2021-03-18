@@ -43,7 +43,7 @@ const OnePost = () => {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-screen max-w-screen-2xl bg-blue-800 bg-opacity-25 mx-auto rounded-lg">
+    <div className="min-h-screen max-w-screen-2xl bg-navy-400 bg-opacity-30 mx-auto rounded-lg">
       <div className="flex flex-col shadow-xl mx-auto 2xl:mb-8 rounded-lg">
         <div className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-4">

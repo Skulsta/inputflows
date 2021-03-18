@@ -36,7 +36,7 @@ export default function AllPosts() {
                   key={post.slug.current}
                 >
                   <span
-                    className="block h-64 relative rounded shadow leading-snug bg-white transition duration-500 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
+                    className="block h-64 relative rounded leading-snug bg-white transition duration-500 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
                     key={index}
                   >
                     <img
