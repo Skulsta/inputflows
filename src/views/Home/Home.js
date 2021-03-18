@@ -9,7 +9,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-blue-800 bg-opacity-10 min-h-screen py-4">
+    <div className="bg-navy bg-opacity-10 min-h-screen py-4">
       <HeroSection />
       <AllPosts />
     </div>
