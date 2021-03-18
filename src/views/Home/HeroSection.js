@@ -47,7 +47,7 @@ export default function HeroSection() {
             />
           </div>
           <div>
-            <h2 className="text-2xl text-center text-gray-800">
+            <h2 className="text-2xl text-turquoise-600 text-center">
               Stian Skulstad
             </h2>
             <p className="text-lg text-center text-gray-700">
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 href="https://github.com/Skulsta/inputflows"
                 target="_blank"
                 rel="noreferrer"
-                className="text-green-800 hover:text-green-600"
+                className="text-blue-800 hover:text-blue"
               >
                 {" "}
                 GitHub

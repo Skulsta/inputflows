@@ -32,7 +32,7 @@ const MemoryCard = ({ id, color, game, flippedIndexes, setFlippedIndexes }) => {
     <div
       onClick={onCardClick}
       className={`${
-        !isFlipped && "bg-green-800 bg-opacity-25"
+        !isFlipped && "bg-blue-800 bg-opacity-25"
       } flex justify-center items-center border cursor-pointer h-40 duration-200 ease-in-out transform hover:shadow-lg sm:hover:-translate-y-1 sm:hover:scale-105`}
       style={{ background: isFlipped && color }}
     >

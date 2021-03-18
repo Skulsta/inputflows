@@ -5,7 +5,7 @@ export default function SearchResults(props) {
   const print = fetchedArray.map((company) => {
     return (
       <div key={company.organisasjonsnummer}>
-        <div className="inline-block border w-full p-4 rounded border-green-800 border-opacity-25">
+        <div className="inline-block border w-full p-4 rounded border-blue-800">
           <CompanyInfo
             name={company.navn}
             organizationNumber={company.organisasjonsnummer}

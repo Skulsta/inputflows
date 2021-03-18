@@ -19,19 +19,19 @@ export default function Info(props) {
         )}
         {props.address && <p>Address: {props.address}</p>}
         {props.website && (
-          <p className="text-green-800 hover:text-green-600">
+          <p>
             <a
               href={"https://" + props.website}
               target="_blank"
               rel="noreferrer"
-              className="text-green-800 hover:text-green-600"
+              className="text-blue-800 hover:text-blue-600"
             >
               Go to website
             </a>
           </p>
         )}
         {props.bankrupt && (
-          <p className="text-red-800">The company is bankrupt</p>
+          <p className="text-red-dark">The company is bankrupt</p>
         )}
       </div>
     );
