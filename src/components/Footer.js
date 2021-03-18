@@ -8,28 +8,28 @@ export default function Footer() {
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
           <h5 className="text-xl font-normal mb-2">Links</h5>
           <div>
-            <Link to="/" className="hover:text-blue">
+            <Link to="/" className="hover:text-green">
               Home
             </Link>
           </div>
           <div>
-            <Link to="/posts" className="hover:text-blue">
+            <Link to="/posts" className="hover:text-green">
               Posts
             </Link>
           </div>
           <div>
-            <Link to="/brreg" className="hover:text-blue">
+            <Link to="/brreg" className="hover:text-green">
               Search
             </Link>
           </div>
           <div>
-            <Link to="/memory" className="hover:text-blue">
+            <Link to="/memory" className="hover:text-green">
               Memory
             </Link>
           </div>
           <div>
             <a
-              className="hover:text-blue"
+              className="hover:text-green"
               href="https://github.com/Skulsta/inputflows"
               target="_blank"
               rel="noreferrer"
