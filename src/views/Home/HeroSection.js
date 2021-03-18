@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="p-8 border w-full self-start bg-white border-none rounded leading-loose space-y-8">
           <div>
             <img
-              className="rounded-full w-1/3 md:w-1/2 mx-auto"
+              className="rounded-full w-40 mx-auto"
               src={ProfileImage}
               alt="Profile"
             />
