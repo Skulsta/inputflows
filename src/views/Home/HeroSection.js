@@ -84,7 +84,7 @@ export default function HeroSection() {
                 href="https://github.com/Skulsta/inputflows"
                 target="_blank"
                 rel="noreferrer"
-                className="text-green-800 hover:text-green-900"
+                className="text-green-900 hover:text-green-800"
               >
                 {" "}
                 GitHub

@@ -24,7 +24,7 @@ export default function Info(props) {
               href={"https://" + props.website}
               target="_blank"
               rel="noreferrer"
-              className="text-green-800 hover:text-green-600"
+              className="text-green-800 hover:text-green-900"
             >
               Go to website
             </a>
