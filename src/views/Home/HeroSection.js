@@ -9,18 +9,15 @@ export default function HeroSection() {
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto">
       <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose text-gray-800">
         <h2 className="text-2xl text-blue-600">
-          My background - in four paragraphs ⏱
+          My background - in three paragraphs ⏱
         </h2>
         <p>
           I'm a software developer with a background in innovation management. I
           first stumbled upon programming while doing my initial service in the
           army. I was preparing to apply to law school when someone showed me a
-          website called Codecademy.
-        </p>
-        <p>
-          Getting code to run after fighting countless Javascript errors was
-          such a great feeling that I threw out the law books and applied for a
-          degree in informatics instead.
+          website called Codecademy. Getting code to run after fighting
+          countless Javascript errors was such a great feeling that I threw out
+          the law books and applied for a degree in informatics instead.
         </p>
         <p>
           During my first semester, I got introduced to a student organization
