@@ -47,7 +47,7 @@ export default function HeroSection() {
             />
           </div>
           <div>
-            <h2 className="text-2xl text-turquoise-600 text-center text-blue-600">
+            <h2 className="text-2xl text-turquoise-600 text-center text-gray-800">
               Stian Skulstad
             </h2>
             <p className="text-lg text-center text-gray-700">
