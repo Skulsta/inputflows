@@ -30,28 +30,31 @@ export default function AllPosts() {
           <h2 className="text-gray-800 text-3xl flex pt-8 pb-4">Posts</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allPostsData &&
-              allPostsData.map((post, index) => (
-                <Link
-                  to={"/posts/" + post.slug.current}
-                  key={post.slug.current}
-                >
-                  <span
-                    className="block h-64 relative rounded leading-snug bg-white transition duration-500 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
-                    key={index}
-                  >
-                    <img
-                      className="w-full h-full rounded object-cover absolute"
-                      src={post.mainImage.asset.url}
-                      alt=""
-                    />
-                    <span className="relative h-full flex justify-end items-end pb-4">
-                      <h2 className="text-gray-800 text-2xl px-3 py-4 bg-white bg-opacity-75">
-                        {post.title}
-                      </h2>
-                    </span>
-                  </span>
-                </Link>
-              ))}
+              allPostsData.map(
+                (post, index) =>
+                  !post.slug.current.includes("-nopub") && (
+                    <Link
+                      to={"/posts/" + post.slug.current}
+                      key={post.slug.current}
+                    >
+                      <span
+                        className="block h-64 relative rounded leading-snug bg-white transition duration-500 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
+                        key={index}
+                      >
+                        <img
+                          className="w-full h-full rounded object-cover absolute"
+                          src={post.mainImage.asset.url}
+                          alt=""
+                        />
+                        <span className="relative h-full flex justify-end items-end pb-4">
+                          <h2 className="text-gray-800 text-2xl px-3 py-4 bg-white bg-opacity-75">
+                            {post.title}
+                          </h2>
+                        </span>
+                      </span>
+                    </Link>
+                  )
+              )}
           </div>
         </div>
       </div>
