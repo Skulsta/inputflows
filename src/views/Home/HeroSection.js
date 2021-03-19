@@ -8,8 +8,11 @@ export default function HeroSection() {
   return (
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto">
       <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose text-gray-800">
-        <h2 className="text-2xl text-gray-800">
-          My background - in three paragraphs ⏱
+        <h2 className="text-2xl">
+          Hi there, I'm Stian.{" "}
+          <span className="text-xl text-gray-600">
+            Here's my background in three paragraphs ⏱
+          </span>
         </h2>
         <p>
           I'm a software developer with a background in innovation management. I
