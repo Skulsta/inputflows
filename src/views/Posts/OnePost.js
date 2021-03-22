@@ -30,7 +30,7 @@ const OnePost = () => {
           body,
           "name": author->name,
           "authorImage": author->image,
-          "publishedAt": publishedAt
+          "publishedAt": publishedAt,
        }`
       )
       .then((data) => {
@@ -53,7 +53,7 @@ const OnePost = () => {
                 <img
                   src={urlFor(postData.authorImage).url()}
                   className="w-10 h-10 rounded-full"
-                  alt="Author is Kap"
+                  alt="Author"
                 />
                 <h4 className="flex items-center pl-2 text-xl">
                   {postData.name}
