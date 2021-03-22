@@ -23,12 +23,12 @@ export default function HeroSection() {
           the law books and applied for a degree in informatics instead.
         </p>
         <p>
-          During my first semester, I got introduced to a student organization
-          that promoted entrepreneurship and innovation among students. The
-          organization took me on a parallel path into the startup world. I
-          became the organization leader and attended programs such as Early
-          Stage in Bergen, European Innovation Academy in Turin, and The
-          Norwegian School of Entrepreneurship in San Francisco.
+          I got introduced to a student organization that promoted
+          entrepreneurship and innovation during my first semester, which
+          steered me into the startup world. I became the organization leader
+          and attended programs such as Early Stage in Bergen, European
+          Innovation Academy in Turin, and The Norwegian School of
+          Entrepreneurship in San Francisco.
         </p>
         <p>
           My interest in technology and innovation then took me to the
