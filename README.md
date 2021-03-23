@@ -3,7 +3,7 @@
 `yarn && yarn start`
 
 ## Memory Game
-The code related to the [Memory Game tutorial](http://localhost:3000/posts/memory-game) can be found in the [MemoryGame folder](https://github.com/Skulsta/inputflows/tree/master/src/views/MemoryGame)
+The code related to the [Memory Game tutorial](https://inputflows.com/posts/memory-game) can be found in the [MemoryGame folder](https://github.com/Skulsta/inputflows/tree/master/src/views/MemoryGame)
 
 
 ## Search and Display data from an API
