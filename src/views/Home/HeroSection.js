@@ -11,7 +11,7 @@ export default function HeroSection() {
         <h2 className="text-2xl">
           Hi there, I'm Stian.{" "}
           <span className="text-xl text-gray-600">
-            Here's my background in three paragraphs ⏱
+            Here's my background in three paragraphs&nbsp;⏱
           </span>
         </h2>
         <p>
