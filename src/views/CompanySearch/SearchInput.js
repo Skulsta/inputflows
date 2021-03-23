@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchResults from "./SearchResults";
 
-export default function SearchInput() {
+const SearchInput = () => {
   const [searchData, setSearchData] = useState([]);
 
   const handleSearch = (event) => {
@@ -39,4 +39,6 @@ export default function SearchInput() {
       <SearchResults companyData={searchData} />
     </div>
   );
-}
+};
+
+export default SearchInput;
