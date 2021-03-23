@@ -4,7 +4,7 @@ import SearchResults from "./SearchResults";
 export default function SearchInput() {
   const [searchData, setSearchData] = useState([]);
 
-  const HandleSearch = (event) => {
+  const handleSearch = (event) => {
     let url;
 
     if (isNaN(event.target.value)) {
@@ -29,14 +29,14 @@ export default function SearchInput() {
   };
 
   return (
-    <div className="space-y-10">
+    <div>
       <input
-        className="border text-gray-800 px-4 py-2 focus:outline-none w-full rounded border-blue-800 hover:border-opacity-50 focus:border-opacity-50"
+        className="border text-gray-800 px-4 py-2 mb-4 focus:outline-none w-full rounded border-blue-800 hover:border-opacity-50 focus:border-opacity-50"
         type="text"
         placeholder="Company name or organization number"
-        onChange={HandleSearch}
+        onChange={handleSearch}
       />
-      <SearchResults data={searchData} />
+      <SearchResults companyData={searchData} />
     </div>
   );
 }

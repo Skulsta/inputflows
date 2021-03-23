@@ -1,10 +1,9 @@
 import CompanyInfo from "./CompanyInfo";
 
-export default function SearchResults(props) {
-  let fetchedArray = props.data;
-  const print = fetchedArray.map((company) => {
+const SearchResults = ({ companyData }) =>
+  companyData.map((company) => {
     return (
-      <div key={company.organisasjonsnummer}>
+      <div key={company.organisasjonsnummer} className="my-4">
         <div className="inline-block border w-full p-4 rounded border-blue-800">
           <CompanyInfo
             name={company.navn}
@@ -33,5 +32,4 @@ export default function SearchResults(props) {
     );
   });
 
-  return <div className="space-y-4">{print}</div>;
-}
+export default SearchResults;

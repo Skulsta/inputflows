@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DownArrow from "../../assets/icons/down-arrow.svg";
 import UpArrow from "../../assets/icons/up-arrow.svg";
 
-export default function Info(props) {
+const CompanyInfo = (props) => {
   const [expanded, setExpanded] = useState(false);
   let expandedContent;
 
@@ -10,28 +10,26 @@ export default function Info(props) {
     expandedContent = (
       <div className="space-y-2 pt-2 text-gray-700">
         <p>
-          <span className="text-blue-900">Organization number:</span>{" "}
+          <span className="font-bold">Organization number:</span>{" "}
           {props.organizationNumber}{" "}
         </p>
         {props.description && (
           <p>
-            <span className="text-blue-900">Description:</span>{" "}
-            {props.description}{" "}
+            <span className="font-bold">Description:</span> {props.description}{" "}
           </p>
         )}
         <p>
-          <span className="text-blue-900">Industry code:</span>{" "}
-          {props.industryCode}{" "}
+          <span className="font-bold">Industry code:</span> {props.industryCode}{" "}
         </p>
         {props.address && (
           <p>
-            <span className="text-blue-900">Postal:</span> {props.postalNumber}{" "}
+            <span className="font-bold">Postal:</span> {props.postalNumber}{" "}
             {props.postal}
           </p>
         )}
         {props.address && (
           <p>
-            <span className="text-blue-900">Address:</span> {props.address}
+            <span className="font-bold">Address:</span> {props.address}
           </p>
         )}
         {props.website && (
@@ -59,9 +57,9 @@ export default function Info(props) {
         className="flex justify-between cursor-pointer text-gray-800"
         onClick={() => setExpanded(!expanded)}
       >
-        <h3>{props.name}</h3>
+        <h3 className={expanded && "text-blue-800 mb-2"}>{props.name}</h3>
         {expanded ? (
-          <img src={UpArrow} alt="close icon" />
+          <img className="mb-4" src={UpArrow} alt="close icon" />
         ) : (
           <img src={DownArrow} alt="open icon" />
         )}
@@ -69,4 +67,6 @@ export default function Info(props) {
       {expandedContent}
     </div>
   );
-}
+};
+
+export default CompanyInfo;

@@ -1,6 +1,7 @@
 {
   "name": "inputflows",
   "version": "0.1.0",
+  "license": "MIT",
   "private": false,
   "dependencies": {
     "@craco/craco": "^6.1.1",
