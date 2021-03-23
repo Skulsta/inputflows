@@ -56,7 +56,7 @@ export default function AllPosts() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center p-4">
         <div>
-          <div className="flex pt-8 pb-4 justify-between items-end text-gray-800">
+          <div className="flex pt-8 pb-6 justify-between items-end text-gray-800">
             <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
             <div className="flex space-x-2 text-gray-800 font-light text-lg">
               <div

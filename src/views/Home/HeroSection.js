@@ -18,9 +18,18 @@ export default function HeroSection() {
           I'm a software developer with a background in innovation management. I
           first stumbled upon programming while doing my initial service in the
           army. I was preparing to apply to law school when someone showed me a
-          website called Codecademy. Getting code to run after fighting
-          countless Javascript errors was such a great feeling that I threw out
-          the law books and applied for a degree in informatics instead.
+          website called{" "}
+          <a
+            href="https://www.codecademy.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="border-b hover:text-green-900"
+          >
+            Codecademy
+          </a>
+          . Getting code to run after fighting countless Javascript errors was
+          such a great feeling that I threw out the law books and applied for a
+          degree in informatics instead.
         </p>
         <p>
           I got introduced to a student organization that promoted
