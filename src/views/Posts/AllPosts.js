@@ -27,6 +27,7 @@ export default function AllPosts() {
   }, []);
 
   const codeCategory = "c2fd0b63-d739-44c3-85b9-623a04a05947";
+  const toolsCategory = "9cd2c7a9-fc7d-4428-8589-16828f55a446";
   const notPublishedCategory = "8ee6c63d-e8ff-407a-ba9c-92e011bf950a";
 
   const renderPosts = (category = null) => {
@@ -47,19 +48,18 @@ export default function AllPosts() {
 
   useEffect(() => {
     renderPosts();
-    console.log("hey");
   }, [allPosts]);
 
   return (
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center p-4">
         <div>
-          <div className="flex pt-8 pb-4 justify-between items-end">
-            <h2 className="text-gray-800 text-3xl">Recent Posts</h2>
-            <div className="flex space-x-4 sm:space-x-4 text-gray-800 font-light">
+          <div className="flex pt-8 pb-4 justify-between items-end text-gray-800">
+            <h2 className="text-xl sm:text-3xl">Recent Posts</h2>
+            <div className="flex space-x-2 text-gray-800 font-light text-lg">
               <div
                 onClick={() => renderPosts("")}
-                className={`text-xl cursor-pointer ${
+                className={`cursor-pointer hover:text-green-900 ${
                   !activeFilter && "text-green-900"
                 }`}
               >
@@ -67,14 +67,29 @@ export default function AllPosts() {
                 nofilter
               </div>
               <div
-                className={`text-xl cursor-pointer ${
-                  activeFilter === codeCategory && "text-green-800"
+                className={`cursor-pointer hover:text-green-900 ${
+                  activeFilter === toolsCategory && "text-green-900"
+                }`}
+                onClick={() => renderPosts(toolsCategory)}
+              >
+                Tools
+              </div>
+              <div
+                className={`cursor-pointer hover:text-green-900 ${
+                  activeFilter === codeCategory && "text-green-900"
                 }`}
                 onClick={() => renderPosts(codeCategory)}
               >
                 Code
               </div>
-              <h2 className="text-xl cursor-pointer">All Posts</h2>
+              {window.location.pathname !== "/posts" && (
+                <Link
+                  to={"/posts"}
+                  className="cursor-pointer hover:text-green-900"
+                >
+                  All Posts
+                </Link>
+              )}
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

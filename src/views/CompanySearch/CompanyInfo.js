@@ -38,7 +38,7 @@ const CompanyInfo = (props) => {
               href={"https://" + props.website}
               target="_blank"
               rel="noreferrer"
-              className="text-green-800 hover:text-green-900"
+              className="text-green-900 hover:text-green-700"
             >
               Go to website
             </a>

@@ -79,7 +79,7 @@ const MemoryBoard = () => {
           )}
           <p
             onClick={resetGame}
-            className="text-green-800 hover:text-green-900 cursor-pointer"
+            className="text-green-900 hover:text-green-800 cursor-pointer"
           >
             Reset Game
           </p>
