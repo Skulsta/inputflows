@@ -9,15 +9,31 @@ export default function Info(props) {
   if (expanded) {
     expandedContent = (
       <div className="space-y-2 pt-2 text-gray-700">
-        <p>Organization number: {props.organizationNumber} </p>
-        {props.description && <p>Description: {props.description} </p>}
-        <p>Industry code: {props.industryCode} </p>
-        {props.address && (
+        <p>
+          <span className="text-blue-900">Organization number:</span>{" "}
+          {props.organizationNumber}{" "}
+        </p>
+        {props.description && (
           <p>
-            Postal: {props.postalNumber} {props.postal}
+            <span className="text-blue-900">Description:</span>{" "}
+            {props.description}{" "}
           </p>
         )}
-        {props.address && <p>Address: {props.address}</p>}
+        <p>
+          <span className="text-blue-900">Industry code:</span>{" "}
+          {props.industryCode}{" "}
+        </p>
+        {props.address && (
+          <p>
+            <span className="text-blue-900">Postal:</span> {props.postalNumber}{" "}
+            {props.postal}
+          </p>
+        )}
+        {props.address && (
+          <p>
+            <span className="text-blue-900">Address:</span> {props.address}
+          </p>
+        )}
         {props.website && (
           <p>
             <a

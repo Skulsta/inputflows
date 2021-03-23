@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import SearchResults from "./SearchResults";
 
 export default function SearchInput() {
-  const [data, setData] = useState("");
   const [searchData, setSearchData] = useState([]);
-  let fetchedData = searchData;
 
   const HandleSearch = (event) => {
     let url;
@@ -28,8 +26,6 @@ export default function SearchInput() {
           setSearchData(companies);
         }
       });
-
-    setData(event.target.value);
   };
 
   return (
@@ -39,9 +35,8 @@ export default function SearchInput() {
         type="text"
         placeholder="Company name or organization number"
         onChange={HandleSearch}
-        value={data}
       />
-      <SearchResults data={fetchedData} />
+      <SearchResults data={searchData} />
     </div>
   );
 }
