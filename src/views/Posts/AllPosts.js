@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loader from "../../components/Loader.js";
 import sanityClient from "../../client.js";
 
 export default function AllPosts() {
@@ -39,6 +40,8 @@ export default function AllPosts() {
       ? "Oh, so you're an alchemist, then?"
       : "";
 
+  const loading = true;
+
   const renderPosts = (category = null) => {
     if (allPosts) {
       setActiveFilter(category);
@@ -75,52 +78,53 @@ export default function AllPosts() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center p-4">
         <div>
-          <div className="flex pt-8 pb-2 justify-between items-end text-gray-800">
-            <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
-            <div className="flex space-x-2 text-gray-800 font-light text-lg">
-              <div
-                onClick={() => renderPosts("")}
-                className={`cursor-pointer hover:text-green-900 ${
-                  !activeFilter && "text-green-900"
-                }`}
-              >
-                <span className="text-gray-800 font-thin">#</span>
-                nofilter
-              </div>
-              <div
-                className={`cursor-pointer hover:text-green-900 ${
-                  activeFilter === toolsCategory && "text-green-900"
-                }`}
-                onClick={() => renderPosts(toolsCategory)}
-              >
-                Tools
-              </div>
-              <div
-                className={`cursor-pointer hover:text-green-900 ${
-                  activeFilter === codeCategory && "text-green-900"
-                }`}
-                onClick={() => renderPosts(codeCategory)}
-              >
-                Code
-              </div>
-              {window.location.pathname !== "/posts" && (
-                <Link
-                  to={"/posts"}
-                  className="cursor-pointer hover:text-green-900"
+          {!filteredPosts && <Loader />}
+          {filteredPosts && (
+            <div className="flex pt-8 pb-2 justify-between items-end text-gray-800">
+              <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
+              <div className="flex space-x-2 text-gray-800 font-light text-lg">
+                <div
+                  onClick={() => renderPosts("")}
+                  className={`cursor-pointer hover:text-green-900 ${
+                    !activeFilter && "text-green-900"
+                  }`}
                 >
-                  All Posts
-                </Link>
-              )}
+                  <span className="text-gray-800 font-thin">#</span>
+                  nofilter
+                </div>
+                <div
+                  className={`cursor-pointer hover:text-green-900 ${
+                    activeFilter === toolsCategory && "text-green-900"
+                  }`}
+                  onClick={() => renderPosts(toolsCategory)}
+                >
+                  Tools
+                </div>
+                <div
+                  className={`cursor-pointer hover:text-green-900 ${
+                    activeFilter === codeCategory && "text-green-900"
+                  }`}
+                  onClick={() => renderPosts(codeCategory)}
+                >
+                  Code
+                </div>
+                {window.location.pathname !== "/posts" && (
+                  <Link
+                    to={"/posts"}
+                    className="cursor-pointer hover:text-green-900"
+                  >
+                    All Posts
+                  </Link>
+                )}
+              </div>
             </div>
-          </div>
+          )}
           <div className="h-8 text-gray-700 cursive tracking-wider">
             {filterText}
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {!filteredPosts ? (
-              <div>Loading...</div>
-            ) : (
-              filteredPosts.map((post, index) => (
+          {(filteredPosts || !loading) && (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post, index) => (
                 <Link
                   to={"/posts/" + post.slug.current}
                   key={post.slug.current}
@@ -141,9 +145,9 @@ export default function AllPosts() {
                     </span>
                   </span>
                 </Link>
-              ))
-            )}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
