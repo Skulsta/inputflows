@@ -19,7 +19,7 @@ const SearchInput = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        const companies = data._embedded && data._embedded.enheter;
+        const companies = data && data._embedded && data._embedded.enheter;
         if (event.target.value.length === 0) {
           setSearchData([]);
         } else {
