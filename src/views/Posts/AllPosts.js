@@ -14,6 +14,7 @@ export default function AllPosts() {
         title,
         slug,
         categories,
+        publishedAt,
         mainImage{
         asset->{
           _id,
@@ -31,6 +32,12 @@ export default function AllPosts() {
   const notPublishedCategory = "8ee6c63d-e8ff-407a-ba9c-92e011bf950a";
   const postsHeader =
     window.location.pathname === "/posts" ? "All Posts" : "Recent Posts";
+  let filterText =
+    activeFilter === toolsCategory
+      ? "So you're interested in my potions and ingredients?"
+      : activeFilter === codeCategory
+      ? "Oh, so you're an alchemist, then?"
+      : "";
 
   const renderPosts = (category = null) => {
     if (allPosts) {
@@ -38,11 +45,23 @@ export default function AllPosts() {
       let posts = [...allPosts].filter(
         (post) => !post.categories?.some((c) => c._ref === notPublishedCategory)
       );
+      console.log(posts[0].title);
+      posts.sort((a, b) => {
+        if (b.publishedAt < a.publishedAt) {
+          return -1;
+        }
+        if (b.publishedAt > a.published) {
+          return 1;
+        }
+        return 0;
+      });
+      console.log(posts.length);
       if (category) {
         posts = posts.filter((post) =>
           post.categories?.some((c) => c._ref === category)
         );
       }
+      if (window.location.pathname === "/") posts = posts.slice(0, 6);
 
       setFilteredPosts(posts);
     }
@@ -56,7 +75,7 @@ export default function AllPosts() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center p-4">
         <div>
-          <div className="flex pt-8 pb-6 justify-between items-end text-gray-800">
+          <div className="flex pt-8 pb-2 justify-between items-end text-gray-800">
             <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
             <div className="flex space-x-2 text-gray-800 font-light text-lg">
               <div
@@ -93,6 +112,9 @@ export default function AllPosts() {
                 </Link>
               )}
             </div>
+          </div>
+          <div className="h-8 text-gray-700 cursive tracking-wider">
+            {filterText}
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {!filteredPosts ? (
