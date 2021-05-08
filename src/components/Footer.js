@@ -30,6 +30,17 @@ export default function Footer() {
           <div>
             <a
               className="hover:text-green"
+              href="https://skulsta.github.io/reisefradrag/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Travel Tax
+            </a>
+          </div>
+          <div>
+            <a
+              className="hover:text-green"
               href="https://github.com/Skulsta/inputflows"
               target="_blank"
               rel="noreferrer"
