@@ -11,7 +11,9 @@ export default function Home() {
   return (
     <div className="bg-navy bg-opacity-10 min-h-screen py-4">
       <HeroSection />
-      <AllPosts />
+      <div className=" mx-auto px-4 max-w-screen-xl">
+        <AllPosts />
+      </div>
     </div>
   );
 }

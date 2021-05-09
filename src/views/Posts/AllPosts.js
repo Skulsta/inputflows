@@ -76,9 +76,8 @@ export default function AllPosts() {
 
   return (
     <div className="bg-opacity-25">
-      <div className="flex max-w-screen-xl mx-auto justify-center p-4">
+      <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
-          {/* {!filteredPosts && <Loader />} */}
           {filteredPosts && (
             <div className="flex pt-8 pb-2 justify-between items-end text-gray-800">
               <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
