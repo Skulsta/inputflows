@@ -33,12 +33,6 @@ export default function AllPosts() {
   const notPublishedCategory = "8ee6c63d-e8ff-407a-ba9c-92e011bf950a";
   const postsHeader =
     window.location.pathname === "/posts" ? "All Posts" : "Recent Posts";
-  let filterText =
-    activeFilter === toolsCategory
-      ? "So you're interested in my potions and ingredients?"
-      : activeFilter === codeCategory
-      ? "Oh, so you're an alchemist, then?"
-      : "";
 
   const loading = true;
 
@@ -118,11 +112,8 @@ export default function AllPosts() {
               </div>
             </div>
           )}
-          <div className="h-8 text-gray-700 cursive tracking-wider">
-            {filterText}
-          </div>
           {(filteredPosts || !loading) && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
               {filteredPosts.map((post, index) => (
                 <Link
                   to={"/posts/" + post.slug.current}
