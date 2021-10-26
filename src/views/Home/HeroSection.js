@@ -7,7 +7,7 @@ import ProfileImage from "../../assets/images/inputflows_profile.jpeg";
 export default function HeroSection() {
   return (
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto mb-4">
-      <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose text-gray-800">
+      <div className="p-8 border bg-white lg:w-2/3 border-none rounded space-y-8 leading-loose text-gray-800 text-justify">
         <h2 className="text-2xl">
           Hi there, I'm Stian.{" "}
           <span className="text-xl text-gray-600">
@@ -16,9 +16,8 @@ export default function HeroSection() {
         </h2>
         <p>
           I'm a software developer with a background in innovation management. I
-          first stumbled upon programming while doing my initial service in the
-          army. I was preparing to apply to law school when someone showed me a
-          website called{" "}
+          first stumbled upon programming while preparing to apply to law school
+          when someone showed me a website called{" "}
           <a
             href="https://www.codecademy.com/"
             target="_blank"
@@ -32,18 +31,17 @@ export default function HeroSection() {
           degree in informatics instead.
         </p>
         <p>
-          I got introduced to a student organization that promoted
-          entrepreneurship and innovation during my first semester, which
-          steered me into the startup world. I became the organization leader
-          and attended programs such as Early Stage in Bergen, European
-          Innovation Academy in Turin, and The Norwegian School of
-          Entrepreneurship in San Francisco.
+          During my first semester, I got introduced to a student organization
+          that promotes entrepreneurship and innovation, which steered me into
+          the startup world. I became the organization leader and attended
+          programs such as Early Stage in Bergen, European Innovation Academy in
+          Turin, and The Norwegian School of Entrepreneurship in San Francisco.
         </p>
         <p>
           My interest in technology and innovation then took me to the
           Department of Informatics at The University of Oslo. They offered a
-          master's degree in Entrepreneurship and Innovation Management, which
-          neatly tied my previous years together.
+          master's degree in Entrepreneurship and Innovation Management, letting
+          me combine the two fields.
         </p>
       </div>
       <div className="flex flex-col lg:w-1/3">
