@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Loader from "../../components/Loader.js";
 import sanityClient from "../../client.js";
 
 export default function AllPosts() {
@@ -73,29 +72,31 @@ export default function AllPosts() {
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
           {filteredPosts && (
-            <div className="flex pt-8 pb-2 justify-between items-end text-gray-800">
+            <div className="flex pt-8 pb-2 justify-between items-end text-gray-800 dark:text-gray-300">
               <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
-              <div className="flex space-x-2 text-gray-800 font-light text-lg">
+              <div className="flex space-x-2 text-gray-800 dark:text-gray-300 font-light text-lg">
                 <div
                   onClick={() => renderPosts("")}
-                  className={`cursor-pointer hover:text-green-900 ${
-                    !activeFilter && "text-green-900"
+                  className={`cursor-pointer hover:text-green-700 ${
+                    !activeFilter && "text-green-700"
                   }`}
                 >
-                  <span className="text-gray-800 font-thin">#</span>
+                  <span className="text-gray-800 dark:text-gray-300 font-thin">
+                    #
+                  </span>
                   nofilter
                 </div>
                 <div
-                  className={`cursor-pointer hover:text-green-900 ${
-                    activeFilter === toolsCategory && "text-green-900"
+                  className={`cursor-pointer hover:text-green-700 ${
+                    activeFilter === toolsCategory && "text-green-700"
                   }`}
                   onClick={() => renderPosts(toolsCategory)}
                 >
                   Tools
                 </div>
                 <div
-                  className={`cursor-pointer hover:text-green-900 ${
-                    activeFilter === codeCategory && "text-green-900"
+                  className={`cursor-pointer hover:text-green-700 ${
+                    activeFilter === codeCategory && "text-green-700"
                   }`}
                   onClick={() => renderPosts(codeCategory)}
                 >
@@ -104,7 +105,7 @@ export default function AllPosts() {
                 {window.location.pathname !== "/posts" && (
                   <Link
                     to={"/posts"}
-                    className="cursor-pointer hover:text-green-900"
+                    className="cursor-pointer hover:text-green-700"
                   >
                     All Posts
                   </Link>

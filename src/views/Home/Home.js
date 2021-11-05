@@ -9,7 +9,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-navy bg-opacity-10 min-h-screen py-4">
+    <div className="bg-navy bg-opacity-10 dark:bg-black dark:bg-opacity-100 min-h-screen py-6">
       <HeroSection />
       <div className=" mx-auto px-4 max-w-screen-xl">
         <AllPosts />

@@ -4,6 +4,7 @@ import mixpanel from "mixpanel-browser";
 import "./assets/styles/tailwind.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ThemePicker } from "./utilities/ThemePicker";
 
 const { REACT_APP_MIXPANEL_DEV, REACT_APP_MIXPANEL_PROD } = process.env;
 
@@ -24,4 +25,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+ThemePicker();
 initiateMixpanel();
