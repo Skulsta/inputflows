@@ -73,7 +73,7 @@ export default function AllPosts() {
         <div>
           {filteredPosts && (
             <div className="flex flex-wrap pt-8 pb-2 justify-between items-end text-gray-800 dark:text-gray-300">
-              <h2 className="text-3xl whitespace-nowrap">{postsHeader}</h2>
+              <h2 className="text-3xl mr-4 whitespace-nowrap">{postsHeader}</h2>
               <div className="flex space-x-4 text-gray-800 dark:text-gray-300 font-light text-lg">
                 <div
                   onClick={() => renderPosts("")}
