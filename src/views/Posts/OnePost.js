@@ -44,7 +44,7 @@ const OnePost = () => {
 
   return (
     <div className="dark:bg-black py-6">
-      <div className="min-h-screen max-w-screen-2xl border border-white bg-navy bg-opacity-10 dark:bg-black dark:bg-opacity-100 mx-auto rounded-lg">
+      <div className="min-h-screen max-w-screen-2xl 2xl:border border-white bg-navy bg-opacity-10 dark:bg-black dark:bg-opacity-100 mx-auto rounded-lg">
         <div className="flex flex-col shadow-xl mx-auto 2xl:mb-8 rounded-lg">
           <div className="relative">
             <div className="absolute h-full w-full flex items-center justify-center p-4">
