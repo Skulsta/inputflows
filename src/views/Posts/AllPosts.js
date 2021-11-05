@@ -72,9 +72,9 @@ export default function AllPosts() {
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
           {filteredPosts && (
-            <div className="flex pt-8 pb-2 justify-between items-end text-gray-800 dark:text-gray-300">
-              <h2 className="text-xl sm:text-3xl">{postsHeader}</h2>
-              <div className="flex space-x-2 text-gray-800 dark:text-gray-300 font-light text-lg">
+            <div className="flex flex-wrap pt-8 pb-2 justify-between items-end text-gray-800 dark:text-gray-300">
+              <h2 className="text-3xl mr-4 whitespace-nowrap">{postsHeader}</h2>
+              <div className="flex space-x-4 text-gray-800 dark:text-gray-300 font-light text-lg">
                 <div
                   onClick={() => renderPosts("")}
                   className={`cursor-pointer hover:text-green-700 ${
