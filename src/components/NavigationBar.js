@@ -14,8 +14,8 @@ export default function NavigationBar() {
   };
 
   return (
-    <div className="bg-white dark:bg-black ">
-      <nav className="py-4 px-4 mx-auto flex max-w-screen-xl justify-between text-gray-700 sticky top-0 z-20 border-b border-gray-100">
+    <div className="bg-white dark:bg-black border-b border-gray-100">
+      <nav className="py-4 px-4 mx-auto flex max-w-screen-xl justify-between text-gray-700 sticky top-0 z-20">
         <Link to="/" className="">
           <h3 className="text-3xl cursive text-gray dark:text-gray-300 transition duration-500 hover:text-green-800 dark:hover:text-green-800">
             Inputflows
@@ -23,9 +23,9 @@ export default function NavigationBar() {
         </Link>
         <button onClick={toggleDarkMode} className="px-4">
           {localStorage.theme === "dark" ? (
-            <img src={Moon} />
+            <img src={Moon} alt="moon" />
           ) : (
-            <img src={Sun} />
+            <img src={Sun} alt="sun" />
           )}
         </button>
       </nav>

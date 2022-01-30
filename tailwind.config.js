@@ -1,25 +1,9 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [
-    "./src/views/**/*.js",
-    "./src/components/**/*.js",
-    "./src/assets/**/*",
-    "./src/utilities/**/*.js",
-    "./src/App.js",
-    "./src/index.js",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: [
-        "Riposte",
-        "ui-sans-serif",
-        "system-ui",
-        ...defaultTheme.fontFamily.sans,
-      ],
-      mono: ["DroidSansMono", ...defaultTheme.fontFamily.mono],
-    },
     colors: {
       white: "#FFFFFF",
       black: "#000000",
@@ -105,9 +89,6 @@ module.exports = {
         DEFAULT: "#e2e2e2",
       },
     },
-    extend: {},
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
