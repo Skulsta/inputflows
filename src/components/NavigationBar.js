@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Sun from "../assets/icons/sun.png";
 import Moon from "../assets/icons/moon.png";
+import LightBulb from "../assets/icons/light-bulb.png";
 
 export default function NavigationBar() {
   const toggleDarkMode = () => {
@@ -22,11 +23,11 @@ export default function NavigationBar() {
           </h3>
         </Link>
         <button onClick={toggleDarkMode} className="px-4">
-          {localStorage.theme === "dark" ? (
-            <img src={Moon} alt="moon" />
-          ) : (
-            <img src={Sun} alt="sun" />
-          )}
+          <img
+            className="dark:grayscale dark:hover:grayscale-0 hover:grayscale transform duration-700"
+            src={LightBulb}
+            alt="toggle dark mode"
+          />
         </button>
       </nav>
     </div>
