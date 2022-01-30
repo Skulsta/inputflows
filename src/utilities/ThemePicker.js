@@ -3,7 +3,7 @@ export const ThemePicker = () => {
   if (
     localStorage.theme === "dark" ||
     (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+      window.matchMedia("(prefers-color-scheme: light)").matches)
   ) {
     document.documentElement.classList.add("dark");
   } else {
