@@ -23,9 +23,9 @@ export default function NavigationBar() {
         </Link>
         <button onClick={toggleDarkMode} className="px-4">
           {localStorage.theme === "dark" ? (
-            <img src={Moon} />
+            <img src={Moon} alt="moon" />
           ) : (
-            <img src={Sun} />
+            <img src={Sun} alt="sun" />
           )}
         </button>
       </nav>
