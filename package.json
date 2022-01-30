@@ -4,29 +4,26 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@craco/craco": "^6.1.1",
-    "@firebase/app": "^0.6.16",
-    "@sanity/block-content-to-react": "^2.0.7",
-    "@sanity/client": "^2.2.6",
-    "@sanity/image-url": "^0.140.22",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "firebase-admin": "^9.5.0",
-    "firebase-functions": "^3.13.2",
-    "mixpanel-browser": "^2.41.0",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "firebase": "^9.6.5",
+    "mixpanel-browser": "^2.43.0",
     "moment": "^2.29.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
-    "web-vitals": "^1.0.1"
+    "react-scripts": "5.0.0",
+    "sanity": "^2.20.0",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build:style": "tailwind build src/assets/styles/index.css -o src/assets/styles/tailwind.css",
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -48,9 +45,8 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "autoprefixer": "^9",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.18"
   }
 }
