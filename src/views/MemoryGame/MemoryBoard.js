@@ -73,9 +73,11 @@ const MemoryBoard = () => {
       <div>
         <div className="flex mb-8 justify-between">
           {game.some((card) => card.flipped === false) ? (
-            <p className="text-gray-800">Flip a card to get started</p>
+            <p className="text-gray-800 dark:text-gray-200">
+              Flip a card to get started
+            </p>
           ) : (
-            <p className="text-gray-800">You made it! 🚀</p>
+            <p className="text-gray-800 dark:text-gray-200">You made it! 🚀</p>
           )}
           <p
             onClick={resetGame}

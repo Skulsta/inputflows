@@ -13,9 +13,19 @@ export default function Footer() {
             </Link>
           </div>
           <div>
-            <Link to="/posts" className="hover:text-green">
-              Posts
+            <Link to="/apps" className="hover:text-green">
+              Apps
             </Link>
+          </div>
+          <div>
+            <a
+              className="hover:text-green"
+              href="https://twitter.com/Skulsta"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twitter
+            </a>
           </div>
           <div>
             <a
@@ -30,6 +40,16 @@ export default function Footer() {
         </div>
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
           <h5 className="text-xl font-normal mb-2">Apps</h5>
+          <div>
+            <a
+              className="hover:text-green"
+              href="https://kassa.no"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Kassa
+            </a>
+          </div>
           <div>
             <Link to="/brreg" className="hover:text-green">
               Search
