@@ -30,7 +30,7 @@ export default function AllApps() {
                 is a platform for quickly and easily setting up a small online
                 store. It lets businesses start selling online in a matter of
                 minutes and includes Vipps Hurtigkasse; the fastest and most
-                user friendly way of paying in Norway.
+                user-friendly way of paying in Norway.
               </p>
               <a
                 href="https://kassa.no"
