@@ -8,7 +8,7 @@ const CompanyInfo = (props) => {
 
   if (expanded) {
     expandedContent = (
-      <div className="space-y-2 pt-2 text-gray-700">
+      <div className="space-y-2 pt-2 text-gray-700 dark:text-gray-200">
         <p>
           <span className="font-bold">Organization number:</span>{" "}
           {props.organizationNumber}{" "}
@@ -54,7 +54,7 @@ const CompanyInfo = (props) => {
   return (
     <div>
       <div
-        className="flex justify-between cursor-pointer text-gray-800"
+        className="flex justify-between cursor-pointer text-gray-800 dark:text-gray-200"
         onClick={() => setExpanded(!expanded)}
       >
         <h3 className={expanded && "text-blue-800 mb-2"}>{props.name}</h3>

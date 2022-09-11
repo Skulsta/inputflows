@@ -1,144 +1,92 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import KassaImage from "../../assets/images/kassa.png";
+import CompanySearch from "../../assets/images/companySearch.png";
+import Reisefradrag from "../../assets/images/reisefradrag.png";
+import Memory from "../../assets/images/memory.png";
 import { Link } from "react-router-dom";
-import sanityClient from "../../client.js";
 
 export default function AllPosts() {
-  const [allPosts, setAllPosts] = useState(null);
-  const [filteredPosts, setFilteredPosts] = useState(null);
-  const [activeFilter, setActiveFilter] = useState("");
-
-  useEffect(() => {
-    sanityClient
-      .fetch(
-        `*[_type == "post"]{
-        title,
-        slug,
-        categories,
-        publishedAt,
-        mainImage{
-        asset->{
-          _id,
-          url
-        }
-      }
-    }`
-      )
-      .then((data) => setAllPosts(data))
-      .catch(console.error);
-  }, []);
-
-  const codeCategory = "c2fd0b63-d739-44c3-85b9-623a04a05947";
-  const toolsCategory = "9cd2c7a9-fc7d-4428-8589-16828f55a446";
-  const notPublishedCategory = "8ee6c63d-e8ff-407a-ba9c-92e011bf950a";
-  const postsHeader =
-    window.location.pathname === "/posts" ? "All Posts" : "Recent Posts";
-
-  const loading = true;
-
-  const renderPosts = (category = null) => {
-    if (allPosts) {
-      setActiveFilter(category);
-      let posts = [...allPosts].filter(
-        (post) => !post.categories?.some((c) => c._ref === notPublishedCategory)
-      );
-      console.log(posts[0].title);
-      posts.sort((a, b) => {
-        if (b.publishedAt < a.publishedAt) {
-          return -1;
-        }
-        if (b.publishedAt > a.published) {
-          return 1;
-        }
-        return 0;
-      });
-      console.log(posts.length);
-      if (category) {
-        posts = posts.filter((post) =>
-          post.categories?.some((c) => c._ref === category)
-        );
-      }
-      if (window.location.pathname === "/") posts = posts.slice(0, 6);
-
-      setFilteredPosts(posts);
-    }
-  };
-
-  useEffect(() => {
-    renderPosts();
-  }, [allPosts]);
-
   return (
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
-          {filteredPosts && (
-            <div className="flex flex-wrap pt-8 pb-2 justify-between items-end text-gray-800 dark:text-gray-300">
-              <h2 className="text-3xl mr-4 whitespace-nowrap">{postsHeader}</h2>
-              <div className="flex space-x-4 text-gray-800 dark:text-gray-300 font-light text-lg">
-                <div
-                  onClick={() => renderPosts("")}
-                  className={`cursor-pointer hover:text-green-700 ${
-                    !activeFilter && "text-green-700"
-                  }`}
-                >
-                  <span className="text-gray-800 dark:text-gray-300 font-thin">
-                    #
-                  </span>
-                  nofilter
-                </div>
-                <div
-                  className={`cursor-pointer hover:text-green-700 ${
-                    activeFilter === toolsCategory && "text-green-700"
-                  }`}
-                  onClick={() => renderPosts(toolsCategory)}
-                >
-                  Tools
-                </div>
-                <div
-                  className={`cursor-pointer hover:text-green-700 ${
-                    activeFilter === codeCategory && "text-green-700"
-                  }`}
-                  onClick={() => renderPosts(codeCategory)}
-                >
-                  Code
-                </div>
-                {window.location.pathname !== "/posts" && (
-                  <Link
-                    to={"/posts"}
-                    className="cursor-pointer hover:text-green-700"
-                  >
-                    All Posts
-                  </Link>
-                )}
-              </div>
+          <h2 className="text-2xl dark:text-gray-100 mt-8 text-gray-800">
+            Projects
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 mt-4 pb-8">
+            <span className="block cursor-pointer transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <img
+                className="w-full h-full object-cover border border-black"
+                src={KassaImage}
+                alt="kassa.no"
+              />
+            </span>
+            <div className="flex flex-col gap-8 justify-center">
+              <h3 className="text-4xl dark:text-gray-100 text-gray-800">
+                Kassa.no
+              </h3>
+              <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
+                My biggest project is fortunately not carried out alone. It's a
+                platform for quickly and easily getting a small online store up
+                and running. It lets businesses start selling online in a matter
+                of minutes and includes Vipps Hurtigkasse, the fastest and most
+                user friendly way of paying in Norway.
+              </p>
+              <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-600">
+                Check it out
+              </button>
             </div>
-          )}
-          {(filteredPosts || !loading) && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-              {filteredPosts.map((post, index) => (
-                <Link
-                  to={"/posts/" + post.slug.current}
-                  key={post.slug.current}
-                >
-                  <span
-                    className="block h-64 relative rounded leading-snug bg-white transition duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
-                    key={index}
-                  >
-                    <img
-                      className="w-full h-full rounded object-cover absolute"
-                      src={post.mainImage.asset.url}
-                      alt=""
-                    />
-                    <span className="relative h-full flex justify-end items-end pb-4">
-                      <h2 className="text-gray-800 text-2xl px-3 py-4 bg-white bg-opacity-75">
-                        {post.title}
-                      </h2>
-                    </span>
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+            <Link to="/brreg">
+              <span className="block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+                <img
+                  className="w-full h-full object-cover border border-black"
+                  src={CompanySearch}
+                  alt="search for companies"
+                />
+                <span className="text-center">
+                  <p className="dark:text-white px-3 py-4 mt-7">
+                    Search for Norwegian companies
+                  </p>
+                </span>
+              </span>
+            </Link>
+            <a
+              href="https://skulsta.github.io/reisefradrag"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="pt-7 block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+                <img
+                  className="w-full h-full object-cover border border-black"
+                  src={Reisefradrag}
+                  alt="search for companies"
+                />
+                <span className="text-center">
+                  <p className="dark:text-white px-3 py-4">
+                    Calculate your travel tax
+                  </p>
+                </span>
+              </span>
+            </a>
+            <a
+              href="https://skulsta.github.io/reisefradrag"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+                <img
+                  className="w-full h-full object-cover border border-black"
+                  src={Memory}
+                  alt="search for companies"
+                />
+                <span className="text-center">
+                  <p className="dark:text-white px-3 py-4 mt-7">Memory game</p>
+                </span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>

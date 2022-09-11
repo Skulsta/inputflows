@@ -35,7 +35,7 @@ const SearchResults = ({ companyData }) =>
       );
     })
   ) : (
-    <p className="text-gray-700">Ingen treff</p>
+    <p className="text-gray-700 dark:text-gray-200">Ingen treff</p>
   );
 
 export default SearchResults;

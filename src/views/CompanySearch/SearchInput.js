@@ -31,6 +31,7 @@ const SearchInput = () => {
   return (
     <div>
       <input
+        autoFocus={true}
         className="border text-gray-800 px-4 py-2 mb-4 focus:outline-none w-full rounded border-blue-800 hover:border-opacity-50 focus:border-opacity-50"
         type="text"
         placeholder="Company name or organization number"
