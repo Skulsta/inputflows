@@ -10,10 +10,10 @@ export default function AllApps() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
-          <h2 className="text-2xl dark:text-gray-100 mt-8 text-gray-800">
+          <h2 className="text-2xl dark:text-gray-100 mt-8 mb-8 text-gray-800">
             Main project
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 mt-4 pb-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
             <span className="block">
               <img
                 className="w-full h-full object-cover border border-black"
@@ -21,16 +21,16 @@ export default function AllApps() {
                 alt="kassa.no"
               />
             </span>
-            <div className="flex flex-col gap-8 justify-center">
-              <h3 className="text-4xl dark:text-gray-100 text-gray-800">
-                Kassa.no
-              </h3>
+            <div className="flex flex-col justify-center gap-4 sm:gap-8">
+              <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
+                Kassa
+              </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                My biggest project is fortunately not carried out alone. It's a
-                platform for quickly and easily setting up a small online store.
-                It lets businesses start selling online in a matter of minutes
-                and includes Vipps Hurtigkasse; the fastest and most user
-                friendly way of paying in Norway.
+                My biggest project is fortunately not carried out alone. Kassa
+                is a platform for quickly and easily setting up a small online
+                store. It lets businesses start selling online in a matter of
+                minutes and includes Vipps Hurtigkasse; the fastest and most
+                user friendly way of paying in Norway.
               </p>
               <a
                 href="https://kassa.no"
@@ -45,7 +45,7 @@ export default function AllApps() {
           <h3 className="text-2xl dark:text-gray-100 mt-8 text-gray-800">
             Small apps
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 mb-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
             <Link to="/brreg">
               <span className="block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
                 <img
@@ -54,7 +54,7 @@ export default function AllApps() {
                   alt="search for companies"
                 />
                 <span className="text-center">
-                  <p className="dark:text-white px-3 py-4 mt-7">
+                  <p className="dark:text-white px-3 py-4 sm:mt-7">
                     Search for Norwegian companies
                   </p>
                 </span>
@@ -65,7 +65,7 @@ export default function AllApps() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="pt-7 block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <span className="sm:pt-7 block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
                 <img
                   className="w-full h-full object-cover border border-black"
                   src={Reisefradrag}
@@ -86,7 +86,9 @@ export default function AllApps() {
                   alt="memory game"
                 />
                 <span className="text-center">
-                  <p className="dark:text-white px-3 py-4 mt-7">Memory game</p>
+                  <p className="dark:text-white px-3 py-4 sm:mt-7">
+                    Memory game
+                  </p>
                 </span>
               </span>
             </Link>
