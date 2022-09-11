@@ -7,7 +7,7 @@ import ProfileImage from "../../assets/images/inputflows_profile.jpeg";
 export default function HeroSection() {
   return (
     <div className="flex px-4 flex-col-reverse md:flex-row justify-center md:space-x-4 md:space-y-0 max-w-screen-xl mx-auto mb-4">
-      <div className="flex flex-col text-lg justify-center p-8 border bg-white dark:bg-gray-900 lg:w-2/3 border-none rounded space-y-8 leading-loose dark:text-gray-100 text-justify">
+      <div className="flex flex-col text-lg justify-center p-8 border bg-white dark:bg-gray-900 lg:w-2/3 border-none rounded space-y-8 leading-loose dark:text-gray-100 sm:text-justify">
         <p>
           Stian is a frontend developer with a background in innovation
           management. He also apparently writes about himself in 3rd person.
