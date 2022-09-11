@@ -47,7 +47,7 @@ export default function AllApps() {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
             <Link to="/brreg">
-              <span className="block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <span className="block sm:transition sm:duration-200 sm:ease-in-out sm:hover:-translate-y-1 sm:hover:scale-105">
                 <img
                   className="w-full h-full object-cover border border-black"
                   src={CompanySearch}
@@ -65,7 +65,7 @@ export default function AllApps() {
               target="_blank"
               rel="noreferrer"
             >
-              <span className="sm:pt-7 block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <span className="sm:pt-7 block sm:transition sm:duration-200 sm:ease-in-out sm:hover:-translate-y-1 sm:hover:scale-105">
                 <img
                   className="w-full h-full object-cover border border-black"
                   src={Reisefradrag}
@@ -79,7 +79,7 @@ export default function AllApps() {
               </span>
             </a>
             <Link to="/memory">
-              <span className="block transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <span className="block sm:transition sm:duration-200 sm:ease-in-out sm:hover:-translate-y-1 sm:hover:scale-105">
                 <img
                   className="w-full h-full object-cover border border-black"
                   src={Memory}
