@@ -26,8 +26,7 @@ export default function AllApps() {
                 Svipe
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                My biggest project is fortunately not carried out alone. Svipe
-                is a platform for quickly and easily setting up a small online
+                Svipe is a platform for quickly and easily setting up a small online
                 store. It lets businesses start selling online in a matter of
                 minutes and includes Vipps Hurtigkasse; the fastest and most
                 user-friendly way of paying in Norway.
