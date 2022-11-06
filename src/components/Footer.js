@@ -43,11 +43,11 @@ export default function Footer() {
           <div>
             <a
               className="hover:text-green"
-              href="https://kassa.no"
+              href="https://svipe.no"
               target="_blank"
               rel="noreferrer"
             >
-              Kassa
+              Svipe
             </a>
           </div>
           <div>

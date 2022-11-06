@@ -1,5 +1,5 @@
 import React from "react";
-import KassaImage from "../../assets/images/kassa.png";
+import SvipeImage from "../../assets/images/svipe.png";
 import CompanySearch from "../../assets/images/companySearch.png";
 import Reisefradrag from "../../assets/images/reisefradrag.png";
 import Memory from "../../assets/images/memory.png";
@@ -17,23 +17,23 @@ export default function AllApps() {
             <span className="block">
               <img
                 className="w-full h-full object-cover border border-black"
-                src={KassaImage}
-                alt="kassa.no"
+                src={SvipeImage}
+                alt="svipe.no"
               />
             </span>
             <div className="flex flex-col justify-center gap-4 sm:gap-8">
               <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
-                Kassa
+                Svipe
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                My biggest project is fortunately not carried out alone. Kassa
+                My biggest project is fortunately not carried out alone. Svipe
                 is a platform for quickly and easily setting up a small online
                 store. It lets businesses start selling online in a matter of
                 minutes and includes Vipps Hurtigkasse; the fastest and most
                 user-friendly way of paying in Norway.
               </p>
               <a
-                href="https://kassa.no"
+                href="https://svipe.no"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
