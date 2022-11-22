@@ -1,9 +1,9 @@
 import React from "react";
-import SvipeImage from "../../assets/images/svipe.png";
-import CompanySearch from "../../assets/images/companySearch.png";
-import Reisefradrag from "../../assets/images/reisefradrag.png";
-import Memory from "../../assets/images/memory.png";
 import { Link } from "react-router-dom";
+import CompanySearch from "../../assets/images/companySearch.png";
+import Memory from "../../assets/images/memory.png";
+import Reisefradrag from "../../assets/images/reisefradrag.png";
+import SvipeImage from "../../assets/images/svipe.png";
 
 export default function AllApps() {
   return (
@@ -26,8 +26,7 @@ export default function AllApps() {
                 Svipe
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                Svipe is a platform for quickly and easily setting up a small online
-                store. It lets businesses start selling online in a matter of
+                Svipe is a quick and easy way to set up an online 'mini store'. It lets businesses start selling in a matter of
                 minutes and includes Vipps Hurtigkasse; the fastest and most
                 user-friendly way of paying in Norway.
               </p>
