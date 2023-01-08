@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CompanySearch from "../../assets/images/companySearch.png";
+import HogwartsImage from "../../assets/images/hogwartslegacy.png";
 import Memory from "../../assets/images/memory.png";
 import Reisefradrag from "../../assets/images/reisefradrag.png";
 import SvipeImage from "../../assets/images/svipe.png";
@@ -11,7 +12,7 @@ export default function AllApps() {
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
           <h2 className="text-2xl dark:text-gray-100 mt-8 mb-8 text-gray-800">
-            Main project
+            Main projects
           </h2>
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
             <span className="block">
@@ -32,6 +33,31 @@ export default function AllApps() {
               </p>
               <a
                 href="https://svipe.no"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
+              >
+                Check it out
+              </a>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
+            <span className="block">
+              <img
+                className="w-full h-full object-cover border border-black"
+                src={HogwartsImage}
+                alt="hogwartslegacy.io"
+              />
+            </span>
+            <div className="flex flex-col justify-center gap-4 sm:gap-8">
+              <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
+                Herbologists Guide to Hogwarts Legacy
+              </h2>
+              <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
+                An application with data and guides focused on herbology and potion mixing in Hogwarts Legacy.
+              </p>
+              <a
+                href="https://hogwartslegacy.io"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
