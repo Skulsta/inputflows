@@ -70,6 +70,16 @@ export default function Footer() {
               Travel Tax
             </a>
           </div>
+          <div>
+            <a
+              className="hover:text-green"
+              href="https://hogwartslegacy.io"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hogwarts Legacy
+            </a>
+          </div>
         </div>
       </div>
     </footer>
