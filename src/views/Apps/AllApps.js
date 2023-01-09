@@ -54,7 +54,7 @@ export default function AllApps() {
                 Herbologists Guide to Hogwarts Legacy
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                An application with data and guides focused on herbology and potion mixing in Hogwarts Legacy.
+              Herbologists Guide to Hogwarts Legacy is an application with data and guides focused on herbology and potion mixing in Hogwarts Legacy.
               </p>
               <a
                 href="https://hogwartslegacy.io"
