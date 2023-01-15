@@ -27,9 +27,10 @@ export default function AllApps() {
                 Svipe
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                Svipe is a quick and easy way to set up an online 'mini store'. It lets businesses start selling in a matter of
-                minutes and includes Vipps Hurtigkasse; the fastest and most
-                user-friendly way of paying in Norway.
+                Svipe is a quick and easy way to set up an online 'mini store'.
+                It lets businesses start selling in a matter of minutes and
+                includes Vipps Hurtigkasse; the fastest and most user-friendly
+                way of paying in Norway.
               </p>
               <a
                 href="https://svipe.no"
@@ -51,10 +52,12 @@ export default function AllApps() {
             </span>
             <div className="flex flex-col justify-center gap-4 sm:gap-8">
               <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
-                Herbologists Guide to Hogwarts Legacy
+                Herbalists Guide to Hogwarts Legacy
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-              Herbologists Guide to Hogwarts Legacy is an application with data and guides focused on herbology and potion mixing in Hogwarts Legacy.
+                Herbalists Guide to Hogwarts Legacy is an application with data
+                and guides focused on herbology and potion mixing in Hogwarts
+                Legacy.
               </p>
               <a
                 href="https://hogwartslegacy.io"
