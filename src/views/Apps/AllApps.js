@@ -11,18 +11,18 @@ export default function AllApps() {
     <div className="bg-opacity-25">
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
-          <h2 className="text-2xl dark:text-gray-100 mt-8 mb-8 text-gray-800">
+          <h2 className="text-2xl dark:text-gray-100 mt-8 mb-4 text-gray-800 font-semibold">
             Main projects
           </h2>
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
-            <span className="block">
+          <div className="flex justify-between gap-4 sm:gap-8 mt-4 pb-8">
+            <span className="block flex-1">
               <img
-                className="w-full h-full object-cover border border-black"
+                className="w-full h-full object-cover"
                 src={SvipeImage}
                 alt="svipe.no"
               />
             </span>
-            <div className="flex flex-col justify-center gap-4 sm:gap-8">
+            <div className="flex flex-col justify-center gap-4 sm:gap-8 flex-1">
               <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
                 Svipe
               </h2>
@@ -45,17 +45,17 @@ export default function AllApps() {
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
             <span className="block">
               <img
-                className="w-full h-full object-cover border border-black"
+                className="w-full h-full object-cover"
                 src={HogwartsImage}
                 alt="hogwartslegacy.io"
               />
             </span>
             <div className="flex flex-col justify-center gap-4 sm:gap-8">
               <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
-                Herbalists Guide to Hogwarts Legacy
+                Herbologist's Guide to Hogwarts Legacy
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                Herbalists Guide to Hogwarts Legacy is an application with data
+                Herbologist's Guide to Hogwarts Legacy is an application with data
                 and guides focused on herbology and potion mixing in Hogwarts
                 Legacy.
               </p>
@@ -69,7 +69,7 @@ export default function AllApps() {
               </a>
             </div>
           </div>
-          <h3 className="text-2xl dark:text-gray-100 mt-8 text-gray-800">
+          <h3 className="text-2xl dark:text-gray-100 mt-8 text-gray-800 font-semibold">
             Small apps
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">

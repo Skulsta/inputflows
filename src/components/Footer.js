@@ -77,7 +77,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Hogwarts Legacy
+              Herbologist
             </a>
           </div>
         </div>
