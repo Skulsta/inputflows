@@ -14,8 +14,8 @@ export default function AllApps() {
           <h2 className="text-2xl dark:text-gray-100 mt-8 mb-4 text-gray-800 font-semibold">
             Main projects
           </h2>
-          <div className="flex justify-between gap-4 sm:gap-8 mt-4 pb-8">
-            <span className="block flex-1">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
+            <span className="block">
               <img
                 className="w-full h-full object-cover"
                 src={SvipeImage}
