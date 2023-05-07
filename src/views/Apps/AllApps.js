@@ -12,7 +12,7 @@ export default function AllApps() {
       <div className="flex max-w-screen-xl mx-auto justify-center">
         <div>
           <h2 className="text-2xl dark:text-gray-100 mt-8 mb-4 text-gray-800 font-semibold">
-            Main projects
+            Projects
           </h2>
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
             <span className="block">
