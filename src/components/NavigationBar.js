@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Sun from "../assets/icons/sun.png";
-import Moon from "../assets/icons/moon.png";
 import LightBulb from "../assets/icons/light-bulb.png";
 
 export default function NavigationBar() {
