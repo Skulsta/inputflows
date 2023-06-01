@@ -37,7 +37,7 @@ export default function HeroSection() {
           </div>
           <div className="flex justify-center space-x-8 dark:bg-gray py-2 px-10 w-max mx-auto rounded-md">
             <a
-              className="transition duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
+              className="transition duration-200 ease-in-out transform hover:rotate-12"
               href="https://www.linkedin.com/in/stian-skulstad/"
               target="_blank"
               rel="noreferrer"
@@ -45,7 +45,7 @@ export default function HeroSection() {
               <img className="w-8" src={LinedInIcon} alt="linkedin button" />
             </a>
             <a
-              className="transition duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
+              className="transition duration-200 ease-in-out transform hover:rotate-12"
               href="https://github.com/Skulsta"
               target="_blank"
               rel="noreferrer"
@@ -53,7 +53,7 @@ export default function HeroSection() {
               <img className="w-8" src={GitHubIcon} alt="linkedin button" />
             </a>
             <a
-              className="transition duration-200 ease-in-out transform hover:shadow-lg hover:-translate-y-1 hover:scale-105"
+              className="transition duration-200 ease-in-out transform hover:rotate-12"
               href="https://twitter.com/Skulsta"
               target="_blank"
               rel="noreferrer"
