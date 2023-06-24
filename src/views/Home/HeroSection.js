@@ -36,7 +36,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    <div className="flex flex-col-reverse max-w-screen-xl mx-auto my-24 px-4">
+    <div className="flex flex-col-reverse max-w-screen-xl mx-auto my-12 sm:my-24 px-4">
       <div className="flex flex-col text-xl border lg:w-3/5 border-none rounded space-y-8 leading-loose dark:text-gray-100 sm:text-justify">
         <p>
           <span className="font-semibold tracking-widest">Welcome!</span> This is the personal website of Stian Skulstad. He is a
