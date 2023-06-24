@@ -9,7 +9,7 @@ import SvipeImage from "../../assets/images/svipe.png";
 export default function AllApps() {
   return (
     <div className="bg-opacity-25">
-      <div className="flex max-w-screen-xl mx-auto justify-center">
+      <div className="flex max-w-screen-xl mx-auto px-4 justify-center">
         <div>
           <h2 className="text-2xl dark:text-gray-100 mt-8 mb-4 text-gray-800 font-semibold">
             Projects

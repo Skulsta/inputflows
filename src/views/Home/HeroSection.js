@@ -6,7 +6,7 @@ import GitHubIcon from "../../assets/icons/github.svg";
 export default function HeroSection() {
   return (
     <>
-          <div className="flex flex-col mb-4 -mt-12">
+      <div className="flex flex-col mb-4 -mt-12">
         <div className="border mx-auto self-start border-none bg-white dark:bg-black rounded-full leading-loose">
           <div className="flex justify-center space-x-8 py-2 px-6 w-max mx-auto">
             <a
@@ -36,8 +36,8 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    <div className="flex px-4 flex-col-reverse justify-center max-w-screen-xl mx-auto my-24">
-      <div className="flex flex-col text-xl justify-center p-8 border mx-auto lg:w-3/5 border-none rounded space-y-8 leading-loose dark:text-gray-100 sm:text-justify">
+    <div className="flex flex-col-reverse max-w-screen-xl mx-auto my-24 px-4">
+      <div className="flex flex-col text-xl border lg:w-3/5 border-none rounded space-y-8 leading-loose dark:text-gray-100 sm:text-justify">
         <p>
           <span className="font-semibold tracking-widest">Welcome!</span> This is the personal website of Stian Skulstad. He is a
           software developer from Norway, working as a consultant. He also apparently writes about himself in third person.
