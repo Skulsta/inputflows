@@ -72,20 +72,35 @@ const MemoryBoard = () => {
     return (
       <div>
         <div className="flex mb-8 justify-between">
-          {game.some((card) => card.flipped === false) ? (
+        {
+                game.some((card) => card.flipped === false) &&
+              (
+                <>
             <p className="text-gray-800 dark:text-gray-200">
               Flip a card to get started
             </p>
-          ) : (
-            <p className="text-gray-800 dark:text-gray-200">You made it! 🚀</p>
+            <p
+            onClick={resetGame}
+            className="text-green-900 hover:text-green-800 cursor-pointer"
+          >
+            Reset Game
+          </p>
+          </>
           )}
-          <p
+        </div>
+        {game.every((card) => !card.flipped === false) &&
+        (
+          <div className="flex justify-center text-gray-800 dark:text-gray-200 flex-col text-center mb-8">
+        <p className=" text-4xl mb-8">You made it! 🚀</p>
+        <p
             onClick={resetGame}
             className="text-green-900 hover:text-green-800 cursor-pointer"
           >
             Reset Game
           </p>
         </div>
+        )}
+        
         <div className="grid grid-cols-3 gap-4">
           {game.map((card, index) => (
             <div key={index}>

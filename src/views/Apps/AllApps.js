@@ -29,7 +29,7 @@ export default function AllApps() {
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
                 Svipe is a quick and easy way to set up an online 'mini store'.
                 It lets businesses start selling in a matter of minutes and
-                includes Vipps Hurtigkasse; the fastest and most user-friendly
+                includes Vipps Checkout; the fastest and most user-friendly
                 way of paying in Norway.
               </p>
               <a
