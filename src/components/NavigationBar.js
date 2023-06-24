@@ -14,18 +14,16 @@ export default function NavigationBar() {
 
   return (
     <div className="bg-white dark:bg-black border-b border-gray-100 dark:border-gray-700">
-      <nav className="py-4 px-4 mx-auto flex max-w-screen-xl justify-between text-gray-700 sticky top-0">
-        <Link to="/" className="">
-          <h3 className="text-3xl cursive text-gray dark:text-gray-300 transition duration-500 hover:text-gray-800 dark:hover:text-white">
+      <nav className="py-2 px-4 mx-auto flex max-w-screen-xl justify-between text-gray-700 sticky top-0">
+        <Link to="/">
+          <h3 className="text-lg text-gray dark:text-gray-300 transition duration-500 hover:text-gray-800 dark:hover:text-white">
             Home
           </h3>
         </Link>
-        <button onClick={toggleDarkMode} className="px-4">
-          <img
-            className="dark:grayscale dark:hover:grayscale-0 hover:grayscale transform duration-700"
-            src={LightBulb}
-            alt="toggle dark mode"
-          />
+        <button onClick={toggleDarkMode}>
+        <h3 className="text-lg text-gray dark:text-gray-300 transition duration-500 hover:text-gray-800 dark:hover:text-white">
+            {localStorage.theme === "dark" ? "Light" : "Dark"}
+          </h3>
         </button>
       </nav>
     </div>
