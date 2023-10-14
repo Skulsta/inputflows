@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 py-12">
+    <footer className="bg-black py-12 dark:border-t">
       <div className="max-w-screen-xl mx-auto flex space-x-16 px-8">
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
-          <h5 className="text-xl font-normal mb-2">Links</h5>
+          <h5 className="text-xl font-normal mb-4">Links</h5>
+          <div className="grid grid-cols-2 gap-4">
           <div>
             <Link to="/" className="hover:text-green">
               Home
@@ -38,8 +39,10 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        </div>
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
-          <h5 className="text-xl font-normal mb-2">Apps</h5>
+          <h5 className="text-xl font-normal mb-4">Apps</h5>
+          <div className="grid grid-cols-3 gap-4">
           <div>
             <a
               className="hover:text-green"
@@ -67,7 +70,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Travel Tax
+              Travel
             </a>
           </div>
           <div>
@@ -77,9 +80,10 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Herbologist
+              Hogwarts
             </a>
           </div>
+        </div>
         </div>
       </div>
     </footer>
