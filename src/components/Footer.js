@@ -50,18 +50,8 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Svipe
+              Svipe Platform
             </a>
-          </div>
-          <div>
-            <Link to="/brreg" className="hover:text-green">
-              Search
-            </Link>
-          </div>
-          <div>
-            <Link to="/memory" className="hover:text-green">
-              Memory
-            </Link>
           </div>
           <div>
             <a
@@ -70,8 +60,18 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Travel
+              Travel Calculator
             </a>
+          </div>
+          <div>
+            <Link to="/brreg" className="hover:text-green">
+              Company Search
+            </Link>
+          </div>
+          <div>
+            <Link to="/memory" className="hover:text-green">
+              Memory Game
+            </Link>
           </div>
           <div>
             <a
@@ -80,8 +80,13 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Hogwarts
+              Hogwarts Legacy
             </a>
+          </div>
+          <div>
+            <Link to="/" className="hover:text-green">
+              Inputflows
+            </Link>
           </div>
         </div>
         </div>

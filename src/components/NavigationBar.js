@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LightBulb from "../assets/icons/light-bulb.png";
 
 export default function NavigationBar() {
   const toggleDarkMode = () => {

@@ -1,7 +1,7 @@
 import React from "react";
-import TwitterIcon from "../../assets/icons/twitter.svg";
 import LinedInIcon from "../../assets/icons/linkedin.svg";
 import GitHubIcon from "../../assets/icons/github.svg";
+import XLogoIcon from "../../assets/icons/x-logo.svg"
 
 export default function HeroSection() {
   return (
@@ -9,16 +9,9 @@ export default function HeroSection() {
       <div className="flex flex-col mb-4 -mt-12">
         <div className="border mx-auto self-start border-none bg-white dark:bg-black rounded-full leading-loose">
           <div className="flex justify-center space-x-8 py-2 px-6 w-max mx-auto">
+            
             <a
-              className="transition duration-200 ease-in-out transform hover:rotate-45"
-              href="https://www.linkedin.com/in/stian-skulstad/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="w-8" src={LinedInIcon} alt="linkedin button" />
-            </a>
-            <a
-              className="transition duration-200 ease-in-out transform hover:-rotate-45 bg-white rounded-full"
+              className="transition duration-200 ease-in-out transform hover:rotate-45 bg-white rounded-full"
               href="https://github.com/Skulsta"
               target="_blank"
               rel="noreferrer"
@@ -26,12 +19,20 @@ export default function HeroSection() {
               <img className="w-8" src={GitHubIcon} alt="linkedin button" />
             </a>
             <a
+              className="transition duration-200 ease-in-out transform hover:-rotate-45"
+              href="https://www.linkedin.com/in/stian-skulstad/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img className="w-8" src={LinedInIcon} alt="linkedin button" />
+            </a>
+            <a
               className="transition duration-200 ease-in-out transform hover:rotate-45"
               href="https://twitter.com/Skulsta"
               target="_blank"
               rel="noreferrer"
             >
-              <img className="w-8" src={TwitterIcon} alt="twitter button" />
+              <img className="w-8 p-1 bg-white rounded-full" src={XLogoIcon} alt="twitter button" />
             </a>
           </div>
         </div>
