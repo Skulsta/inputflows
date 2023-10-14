@@ -55,7 +55,7 @@ export default function AllApps() {
                 Hogwarts Legacy
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                A small application with data
+                An application with data
                 and guides for Hogwarts
                 Legacy. Not super useful, but fun to make.
               </p>
