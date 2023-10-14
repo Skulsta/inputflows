@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CompanySearch from "../../assets/images/companySearch.png";
-import HogwartsImage from "../../assets/images/hogwartslegacy.png";
+import HogwartsImage from "../../assets/images/hogwarts_safari.png";
 import Memory from "../../assets/images/memory.png";
 import Reisefradrag from "../../assets/images/reisefradrag.png";
-import SvipeImage from "../../assets/images/svipe.png";
+import SvipeImage from "../../assets/images/svipe_safari.png";
 
 export default function AllApps() {
   return (
@@ -38,7 +38,7 @@ export default function AllApps() {
                 rel="noreferrer"
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
               >
-                Check it out
+                Go to Svipe
               </a>
             </div>
           </div>
@@ -52,12 +52,12 @@ export default function AllApps() {
             </span>
             <div className="flex flex-col justify-center gap-4 sm:gap-8">
               <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
-                Herbologist's Guide to Hogwarts Legacy
+                Hogwarts Legacy
               </h2>
               <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                Herbologist's Guide to Hogwarts Legacy is an application with data
-                and guides focused on herbology and potion mixing in Hogwarts
-                Legacy.
+                A small application with data
+                and guides for Hogwarts
+                Legacy. Not super useful, but fun to make.
               </p>
               <a
                 href="https://hogwartslegacy.io"
@@ -65,7 +65,7 @@ export default function AllApps() {
                 rel="noreferrer"
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
               >
-                Check it out
+                Check it site
               </a>
             </div>
           </div>

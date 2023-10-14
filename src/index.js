@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import mixpanel from "mixpanel-browser";
 import { ThemePicker } from "./utilities/ThemePicker";
 
-const { REACT_APP_MIXPANEL_DEV, REACT_APP_MIXPANEL_PROD } = process.env;
+const { REACT_APP_MIXPANEL_PROD } = process.env;
 
 const initiateMixpanel = () => {
   process.env.NODE_ENV === "production"
