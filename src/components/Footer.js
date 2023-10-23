@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto flex space-x-16 px-8">
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
           <h5 className="text-xl font-normal mb-4">Links</h5>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <Link to="/" className="hover:text-green">
               Home
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col mx-4 text-white font-thin leading-loose">
           <h5 className="text-xl font-normal mb-4">Apps</h5>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <a
               className="hover:text-green"
@@ -50,7 +50,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Svipe Platform
+              Svipe&nbsp;Platform
             </a>
           </div>
           <div>
@@ -60,17 +60,17 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Travel Calculator
+              Travel&nbsp;Calculator
             </a>
           </div>
           <div>
             <Link to="/brreg" className="hover:text-green">
-              Company Search
+              Company&nbsp;Search
             </Link>
           </div>
           <div>
             <Link to="/memory" className="hover:text-green">
-              Memory Game
+              Memory&nbsp;Game
             </Link>
           </div>
           <div>
@@ -80,7 +80,7 @@ export default function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-              Hogwarts Legacy
+              Hogwarts&nbsp;Legacy
             </a>
           </div>
           <div>
