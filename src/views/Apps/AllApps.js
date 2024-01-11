@@ -14,7 +14,8 @@ export default function AllApps() {
           <h2 className="text-2xl dark:text-gray-100 mt-8 mb-4 text-gray-800 font-semibold">
             Projects
           </h2>
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
+          <div className="flex flex-col gap-4">
+          <div className="grid md:grid-cols-2 gap-4 mt-4 pb-8">
             <span className="block">
               <img
                 className="w-full h-full object-cover"
@@ -65,9 +66,35 @@ export default function AllApps() {
                 rel="noreferrer"
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
               >
-                Check it site
+                Check it out
               </a>
             </div>
+          </div>
+          {/* <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mt-4 pb-8">
+            <span className="block">
+              <img
+                className="w-full h-full object-cover"
+                src={TredveImage}
+                alt="tredve.no"
+              />
+            </span>
+            <div className="flex flex-col justify-center gap-4 sm:gap-8">
+              <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
+                Tredve
+              </h2>
+              <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
+                A friend of mine and I were combining our 30th birthdays into one. I made an event site for the occasion, complete with a signup form and admin tools.
+              </p>
+              <a
+                href="https://tredve.no"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
+              >
+                Go to Tredve
+              </a>
+            </div>
+            </div> */}
           </div>
           <h3 className="text-2xl dark:text-gray-100 mt-8 text-gray-800 font-semibold">
             Small apps
