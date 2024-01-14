@@ -1,15 +1,23 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
+import NavigationBar from "./components/NavigationBar";
+import ScrollToTop from "./utilities/ScrollToTop";
 import Apps from "./views/Apps/Apps";
 import CompanySearch from "./views/CompanySearch/CompanySearch";
 import Home from "./views/Home/Home";
-import ScrollToTop from "./utilities/ScrollToTop";
 import MemoryGame from "./views/MemoryGame/MemoryGame";
 import Playground from "./views/Playground/Playground";
 
+import Plausible from 'plausible-tracker';
+
 function App() {
+  const plausible = Plausible({
+    domain: 'inputflows.com'
+  })
+  
+  plausible.enableAutoPageviews()
+
   return (
     <BrowserRouter>
       <ScrollToTop />
