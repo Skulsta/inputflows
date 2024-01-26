@@ -9,17 +9,8 @@ import Home from "./views/Home/Home";
 import MemoryGame from "./views/MemoryGame/MemoryGame";
 import Playground from "./views/Playground/Playground";
 
-import Plausible from 'plausible-tracker';
-
 
 function App() {
-  
-  const plausible = Plausible({
-    domain: 'inputflows.com'
-  })
-
-  const { enableAutoPageviews } = plausible;
-  enableAutoPageviews();
 
   return (
     <BrowserRouter>
