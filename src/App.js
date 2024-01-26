@@ -18,7 +18,7 @@ function App() {
     domain: 'inputflows.com'
   })
 
-  const { enableAutoPageviews } = plausible();
+  const { enableAutoPageviews } = plausible;
   enableAutoPageviews();
 
   return (
