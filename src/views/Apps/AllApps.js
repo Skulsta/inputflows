@@ -4,6 +4,7 @@ import CompanySearch from "../../assets/images/companySearch.png";
 import HogwartsImage from "../../assets/images/hogwarts_safari.png";
 import Memory from "../../assets/images/memory.png";
 import Reisefradrag from "../../assets/images/reisefradrag.png";
+import SenenceImage from "../../assets/images/senence_safari.png";
 import SvipeImage from "../../assets/images/svipe_safari.png";
 
 export default function AllApps() {
@@ -40,6 +41,32 @@ export default function AllApps() {
                 className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
               >
                 Go to Svipe
+              </a>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4 mt-4 pb-8">
+            <span className="block">
+              <img
+                className="w-full h-full object-cover"
+                src={SenenceImage}
+                alt="senence.com"
+              />
+            </span>
+            <div className="flex flex-col justify-center gap-4 sm:gap-8 flex-1">
+              <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
+                Senence
+              </h2>
+              <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
+              A site where I occasionally write about technology, mostly in a non-technical way.
+              I focus on the user experience and the business side of things.
+              </p>
+              <a
+                href="https://senence.com"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
+              >
+                Read Senence
               </a>
             </div>
           </div>
