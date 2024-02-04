@@ -84,9 +84,14 @@ export default function Footer() {
             </a>
           </div>
           <div>
-            <Link to="/" className="hover:text-green">
-              Inputflows
-            </Link>
+            <a
+              className="hover:text-green"
+              href="https://senence.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Senence
+            </a>
           </div>
         </div>
         </div>
