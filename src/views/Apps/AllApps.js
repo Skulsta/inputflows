@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Link } from "react-router-dom";
+import BesummonedImage from "../../assets/images/besummoned_safari.png";
 import CompanySearch from "../../assets/images/companySearch.png";
 import HogwartsImage from "../../assets/images/hogwarts_safari.png";
 import Memory from "../../assets/images/memory.png";
@@ -49,6 +50,32 @@ export default function AllApps() {
               <span className="block">
                 <img
                   className="w-full h-full object-cover"
+                  src={BesummonedImage}
+                  alt="besummoned.com"
+                />
+              </span>
+              <div className="flex flex-col justify-center gap-4 sm:gap-8 flex-1">
+                <h2 className="text-3xl dark:text-gray-100 hidden sm:inline-block mt-8 text-gray-800">
+                  besummoned
+                </h2>
+                <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
+                  besummoned is a platform where you can create events in
+                  seconds, without any signups or logins.
+                </p>
+                <a
+                  href="https://besummoned.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
+                >
+                  Go to besummoned
+                </a>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-4 mt-4 pb-8">
+              <span className="block">
+                <img
+                  className="w-full h-full object-cover"
                   src={SenenceImage}
                   alt="senence.com"
                 />
@@ -58,9 +85,8 @@ export default function AllApps() {
                   Senence
                 </h2>
                 <p className="text-lg dark:text-gray-200 text-gray-800 leading-8">
-                  A site where I occasionally write about technology, mostly in
-                  a non-technical way. I focus on the user experience and the
-                  business side of things.
+                  A site where I (very occasionally) write about technology,
+                  mostly in a non-technical way.
                 </p>
                 <a
                   href="https://senence.com"
