@@ -39,7 +39,6 @@ export default function AllApps() {
                 <a
                   href="https://svipe.no"
                   target="_blank"
-                  rel="noopener"
                   className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
                 >
                   Go to Svipe
@@ -65,7 +64,6 @@ export default function AllApps() {
                 <a
                   href="https://besummoned.com"
                   target="_blank"
-                  rel="noopener"
                   className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
                 >
                   Go to besummoned
@@ -92,7 +90,6 @@ export default function AllApps() {
                 <a
                   href="https://hogwartslegacy.io"
                   target="_blank"
-                  rel="noopener"
                   className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
                 >
                   Check it out
@@ -119,7 +116,6 @@ export default function AllApps() {
                 <a
                   href="https://senence.com"
                   target="_blank"
-                  rel="noopener"
                   className="bg-gray-800 text-center text-white px-4 py-2 rounded-md hover:bg-gray-600"
                 >
                   Read Senence
