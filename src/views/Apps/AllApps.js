@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import { Link } from "react-router-dom";
-import BesummonedImage from "../../assets/images/besummoned_safari.png";
+import BesummonedImage from "../../assets/images/besummoned.png";
 import CompanySearch from "../../assets/images/companySearch.png";
 import HogwartsImage from "../../assets/images/hogwarts_safari.png";
 import Memory from "../../assets/images/memory.png";
